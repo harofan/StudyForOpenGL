@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A6B425CF2085DE1000CC0035 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B425CE2085DE1000CC0035 /* AppDelegate.m */; };
+		A6B425D22085DE1000CC0035 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B425D12085DE1000CC0035 /* ViewController.m */; };
+		A6B425D52085DE1000CC0035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6B425D32085DE1000CC0035 /* Main.storyboard */; };
+		A6B425D72085DE1100CC0035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6B425D62085DE1100CC0035 /* Assets.xcassets */; };
+		A6B425DA2085DE1100CC0035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6B425D82085DE1100CC0035 /* LaunchScreen.storyboard */; };
+		A6B425DD2085DE1100CC0035 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B425DC2085DE1100CC0035 /* main.m */; };
+		A6B425E72085DE1100CC0035 /* OpegGLDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B425E62085DE1100CC0035 /* OpegGLDemoTests.m */; };
+		A6B425F22085DE1100CC0035 /* OpegGLDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B425F12085DE1100CC0035 /* OpegGLDemoUITests.m */; };
+		A6B426032087230C00CC0035 /* SimpleTriangleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B426022087230C00CC0035 /* SimpleTriangleViewController.m */; };
+		A6B426062087302300CC0035 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6B426052087302300CC0035 /* OpenGLES.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A6B425E32085DE1100CC0035 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6B425C22085DE1000CC0035 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6B425C92085DE1000CC0035;
+			remoteInfo = OpegGLDemo;
+		};
+		A6B425EE2085DE1100CC0035 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6B425C22085DE1000CC0035 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6B425C92085DE1000CC0035;
+			remoteInfo = OpegGLDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A6B425CA2085DE1000CC0035 /* OpegGLDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpegGLDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6B425CD2085DE1000CC0035 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A6B425CE2085DE1000CC0035 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A6B425D02085DE1000CC0035 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A6B425D12085DE1000CC0035 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A6B425D42085DE1000CC0035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A6B425D62085DE1100CC0035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A6B425D92085DE1100CC0035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A6B425DB2085DE1100CC0035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6B425DC2085DE1100CC0035 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A6B425E22085DE1100CC0035 /* OpegGLDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpegGLDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6B425E62085DE1100CC0035 /* OpegGLDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpegGLDemoTests.m; sourceTree = "<group>"; };
+		A6B425E82085DE1100CC0035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6B425ED2085DE1100CC0035 /* OpegGLDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpegGLDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6B425F12085DE1100CC0035 /* OpegGLDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpegGLDemoUITests.m; sourceTree = "<group>"; };
+		A6B425F32085DE1100CC0035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6B426012087230C00CC0035 /* SimpleTriangleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTriangleViewController.h; sourceTree = "<group>"; };
+		A6B426022087230C00CC0035 /* SimpleTriangleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTriangleViewController.m; sourceTree = "<group>"; };
+		A6B426052087302300CC0035 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6B425C72085DE1000CC0035 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6B426062087302300CC0035 /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6B425DF2085DE1100CC0035 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6B425EA2085DE1100CC0035 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A6B425C12085DE1000CC0035 = {
+			isa = PBXGroup;
+			children = (
+				A6B425CC2085DE1000CC0035 /* OpegGLDemo */,
+				A6B425E52085DE1100CC0035 /* OpegGLDemoTests */,
+				A6B425F02085DE1100CC0035 /* OpegGLDemoUITests */,
+				A6B425CB2085DE1000CC0035 /* Products */,
+				A6B426042087302300CC0035 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A6B425CB2085DE1000CC0035 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6B425CA2085DE1000CC0035 /* OpegGLDemo.app */,
+				A6B425E22085DE1100CC0035 /* OpegGLDemoTests.xctest */,
+				A6B425ED2085DE1100CC0035 /* OpegGLDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6B425CC2085DE1000CC0035 /* OpegGLDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A6B425FF208717E100CC0035 /* Class */,
+				A6B425CD2085DE1000CC0035 /* AppDelegate.h */,
+				A6B425CE2085DE1000CC0035 /* AppDelegate.m */,
+				A6B425D02085DE1000CC0035 /* ViewController.h */,
+				A6B425D12085DE1000CC0035 /* ViewController.m */,
+				A6B425D32085DE1000CC0035 /* Main.storyboard */,
+				A6B425D62085DE1100CC0035 /* Assets.xcassets */,
+				A6B425D82085DE1100CC0035 /* LaunchScreen.storyboard */,
+				A6B425DB2085DE1100CC0035 /* Info.plist */,
+				A6B425DC2085DE1100CC0035 /* main.m */,
+			);
+			path = OpegGLDemo;
+			sourceTree = "<group>";
+		};
+		A6B425E52085DE1100CC0035 /* OpegGLDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				A6B425E62085DE1100CC0035 /* OpegGLDemoTests.m */,
+				A6B425E82085DE1100CC0035 /* Info.plist */,
+			);
+			path = OpegGLDemoTests;
+			sourceTree = "<group>";
+		};
+		A6B425F02085DE1100CC0035 /* OpegGLDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A6B425F12085DE1100CC0035 /* OpegGLDemoUITests.m */,
+				A6B425F32085DE1100CC0035 /* Info.plist */,
+			);
+			path = OpegGLDemoUITests;
+			sourceTree = "<group>";
+		};
+		A6B425FF208717E100CC0035 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				A6B42600208722F300CC0035 /* SimpleTriangle */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		A6B42600208722F300CC0035 /* SimpleTriangle */ = {
+			isa = PBXGroup;
+			children = (
+				A6B426012087230C00CC0035 /* SimpleTriangleViewController.h */,
+				A6B426022087230C00CC0035 /* SimpleTriangleViewController.m */,
+			);
+			path = SimpleTriangle;
+			sourceTree = "<group>";
+		};
+		A6B426042087302300CC0035 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6B426052087302300CC0035 /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6B425C92085DE1000CC0035 /* OpegGLDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6B425F62085DE1100CC0035 /* Build configuration list for PBXNativeTarget "OpegGLDemo" */;
+			buildPhases = (
+				A6B425C62085DE1000CC0035 /* Sources */,
+				A6B425C72085DE1000CC0035 /* Frameworks */,
+				A6B425C82085DE1000CC0035 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpegGLDemo;
+			productName = OpegGLDemo;
+			productReference = A6B425CA2085DE1000CC0035 /* OpegGLDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A6B425E12085DE1100CC0035 /* OpegGLDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6B425F92085DE1100CC0035 /* Build configuration list for PBXNativeTarget "OpegGLDemoTests" */;
+			buildPhases = (
+				A6B425DE2085DE1100CC0035 /* Sources */,
+				A6B425DF2085DE1100CC0035 /* Frameworks */,
+				A6B425E02085DE1100CC0035 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6B425E42085DE1100CC0035 /* PBXTargetDependency */,
+			);
+			name = OpegGLDemoTests;
+			productName = OpegGLDemoTests;
+			productReference = A6B425E22085DE1100CC0035 /* OpegGLDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A6B425EC2085DE1100CC0035 /* OpegGLDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6B425FC2085DE1100CC0035 /* Build configuration list for PBXNativeTarget "OpegGLDemoUITests" */;
+			buildPhases = (
+				A6B425E92085DE1100CC0035 /* Sources */,
+				A6B425EA2085DE1100CC0035 /* Frameworks */,
+				A6B425EB2085DE1100CC0035 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6B425EF2085DE1100CC0035 /* PBXTargetDependency */,
+			);
+			name = OpegGLDemoUITests;
+			productName = OpegGLDemoUITests;
+			productReference = A6B425ED2085DE1100CC0035 /* OpegGLDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6B425C22085DE1000CC0035 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = RPGLiker;
+				TargetAttributes = {
+					A6B425C92085DE1000CC0035 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					A6B425E12085DE1100CC0035 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = A6B425C92085DE1000CC0035;
+					};
+					A6B425EC2085DE1100CC0035 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = A6B425C92085DE1000CC0035;
+					};
+				};
+			};
+			buildConfigurationList = A6B425C52085DE1000CC0035 /* Build configuration list for PBXProject "OpegGLDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A6B425C12085DE1000CC0035;
+			productRefGroup = A6B425CB2085DE1000CC0035 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6B425C92085DE1000CC0035 /* OpegGLDemo */,
+				A6B425E12085DE1100CC0035 /* OpegGLDemoTests */,
+				A6B425EC2085DE1100CC0035 /* OpegGLDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6B425C82085DE1000CC0035 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6B425DA2085DE1100CC0035 /* LaunchScreen.storyboard in Resources */,
+				A6B425D72085DE1100CC0035 /* Assets.xcassets in Resources */,
+				A6B425D52085DE1000CC0035 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6B425E02085DE1100CC0035 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6B425EB2085DE1100CC0035 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6B425C62085DE1000CC0035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6B426032087230C00CC0035 /* SimpleTriangleViewController.m in Sources */,
+				A6B425D22085DE1000CC0035 /* ViewController.m in Sources */,
+				A6B425DD2085DE1100CC0035 /* main.m in Sources */,
+				A6B425CF2085DE1000CC0035 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6B425DE2085DE1100CC0035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6B425E72085DE1100CC0035 /* OpegGLDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6B425E92085DE1100CC0035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6B425F22085DE1100CC0035 /* OpegGLDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A6B425E42085DE1100CC0035 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6B425C92085DE1000CC0035 /* OpegGLDemo */;
+			targetProxy = A6B425E32085DE1100CC0035 /* PBXContainerItemProxy */;
+		};
+		A6B425EF2085DE1100CC0035 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6B425C92085DE1000CC0035 /* OpegGLDemo */;
+			targetProxy = A6B425EE2085DE1100CC0035 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A6B425D32085DE1000CC0035 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6B425D42085DE1000CC0035 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A6B425D82085DE1100CC0035 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6B425D92085DE1100CC0035 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A6B425F42085DE1100CC0035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A6B425F52085DE1100CC0035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6B425F72085DE1100CC0035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V3P7E8N222;
+				INFOPLIST_FILE = OpegGLDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RPGLiker.OpegGLDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A6B425F82085DE1100CC0035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V3P7E8N222;
+				INFOPLIST_FILE = OpegGLDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RPGLiker.OpegGLDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A6B425FA2085DE1100CC0035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V3P7E8N222;
+				INFOPLIST_FILE = OpegGLDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RPGLiker.OpegGLDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpegGLDemo.app/OpegGLDemo";
+			};
+			name = Debug;
+		};
+		A6B425FB2085DE1100CC0035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V3P7E8N222;
+				INFOPLIST_FILE = OpegGLDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RPGLiker.OpegGLDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpegGLDemo.app/OpegGLDemo";
+			};
+			name = Release;
+		};
+		A6B425FD2085DE1100CC0035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V3P7E8N222;
+				INFOPLIST_FILE = OpegGLDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RPGLiker.OpegGLDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OpegGLDemo;
+			};
+			name = Debug;
+		};
+		A6B425FE2085DE1100CC0035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V3P7E8N222;
+				INFOPLIST_FILE = OpegGLDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RPGLiker.OpegGLDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OpegGLDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6B425C52085DE1000CC0035 /* Build configuration list for PBXProject "OpegGLDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6B425F42085DE1100CC0035 /* Debug */,
+				A6B425F52085DE1100CC0035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6B425F62085DE1100CC0035 /* Build configuration list for PBXNativeTarget "OpegGLDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6B425F72085DE1100CC0035 /* Debug */,
+				A6B425F82085DE1100CC0035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6B425F92085DE1100CC0035 /* Build configuration list for PBXNativeTarget "OpegGLDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6B425FA2085DE1100CC0035 /* Debug */,
+				A6B425FB2085DE1100CC0035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6B425FC2085DE1100CC0035 /* Build configuration list for PBXNativeTarget "OpegGLDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6B425FD2085DE1100CC0035 /* Debug */,
+				A6B425FE2085DE1100CC0035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A6B425C22085DE1000CC0035 /* Project object */;
+}
