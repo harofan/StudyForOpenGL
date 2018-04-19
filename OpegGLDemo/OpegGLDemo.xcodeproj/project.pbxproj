@@ -17,6 +17,10 @@
 		A6B425F22085DE1100CC0035 /* OpegGLDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B425F12085DE1100CC0035 /* OpegGLDemoUITests.m */; };
 		A6B426032087230C00CC0035 /* SimpleTriangleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B426022087230C00CC0035 /* SimpleTriangleViewController.m */; };
 		A6B426062087302300CC0035 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6B426052087302300CC0035 /* OpenGLES.framework */; };
+		A6B4260B2088342400CC0035 /* AGLKViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B4260A2088342400CC0035 /* AGLKViewViewController.m */; };
+		A6B4260E2088343B00CC0035 /* AGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B4260D2088343B00CC0035 /* AGLKView.m */; };
+		A6B42614208870C500CC0035 /* AEAGLContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42613208870C500CC0035 /* AEAGLContext.m */; };
+		A6B42617208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42616208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,14 @@
 		A6B426012087230C00CC0035 /* SimpleTriangleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTriangleViewController.h; sourceTree = "<group>"; };
 		A6B426022087230C00CC0035 /* SimpleTriangleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTriangleViewController.m; sourceTree = "<group>"; };
 		A6B426052087302300CC0035 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		A6B426092088342400CC0035 /* AGLKViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKViewViewController.h; sourceTree = "<group>"; };
+		A6B4260A2088342400CC0035 /* AGLKViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKViewViewController.m; sourceTree = "<group>"; };
+		A6B4260C2088343B00CC0035 /* AGLKView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKView.h; sourceTree = "<group>"; };
+		A6B4260D2088343B00CC0035 /* AGLKView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKView.m; sourceTree = "<group>"; };
+		A6B42612208870C500CC0035 /* AEAGLContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEAGLContext.h; sourceTree = "<group>"; };
+		A6B42613208870C500CC0035 /* AEAGLContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEAGLContext.m; sourceTree = "<group>"; };
+		A6B42615208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKVertexAttribArrayBuffer.h; sourceTree = "<group>"; };
+		A6B42616208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttribArrayBuffer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +155,7 @@
 		A6B425FF208717E100CC0035 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A6B426082088341400CC0035 /* AGLKView */,
 				A6B42600208722F300CC0035 /* SimpleTriangle */,
 			);
 			path = Class;
@@ -163,6 +176,21 @@
 				A6B426052087302300CC0035 /* OpenGLES.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6B426082088341400CC0035 /* AGLKView */ = {
+			isa = PBXGroup;
+			children = (
+				A6B426092088342400CC0035 /* AGLKViewViewController.h */,
+				A6B4260A2088342400CC0035 /* AGLKViewViewController.m */,
+				A6B4260C2088343B00CC0035 /* AGLKView.h */,
+				A6B4260D2088343B00CC0035 /* AGLKView.m */,
+				A6B42612208870C500CC0035 /* AEAGLContext.h */,
+				A6B42613208870C500CC0035 /* AEAGLContext.m */,
+				A6B42615208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.h */,
+				A6B42616208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m */,
+			);
+			path = AGLKView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +325,11 @@
 			files = (
 				A6B426032087230C00CC0035 /* SimpleTriangleViewController.m in Sources */,
 				A6B425D22085DE1000CC0035 /* ViewController.m in Sources */,
+				A6B42614208870C500CC0035 /* AEAGLContext.m in Sources */,
 				A6B425DD2085DE1100CC0035 /* main.m in Sources */,
+				A6B42617208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m in Sources */,
+				A6B4260E2088343B00CC0035 /* AGLKView.m in Sources */,
+				A6B4260B2088342400CC0035 /* AGLKViewViewController.m in Sources */,
 				A6B425CF2085DE1000CC0035 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

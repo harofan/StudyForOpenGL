@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "SimpleTriangleViewController.h"
+#import "AGLKViewViewController.h"
+
+
 #define ScreenWidth         [[UIScreen mainScreen] bounds].size.width
 #define ScreenHeight        [[UIScreen mainScreen] bounds].size.height
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -41,7 +44,12 @@
         }
             break;
             
-
+        case 1:
+        {
+            AGLKViewViewController *vc = [[AGLKViewViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -66,7 +74,7 @@
 #pragma mark - set && get
 - (NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@"简单三角形的渲染"];
+        _dataArray = @[@"简单三角形的渲染", @"自定义一个glview"];
     }
     return _dataArray;
 }
