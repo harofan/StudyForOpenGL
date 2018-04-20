@@ -21,6 +21,7 @@
 		A6B4260E2088343B00CC0035 /* AGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B4260D2088343B00CC0035 /* AGLKView.m */; };
 		A6B42614208870C500CC0035 /* AEAGLContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42613208870C500CC0035 /* AEAGLContext.m */; };
 		A6B42617208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42616208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m */; };
+		A6B4261B2088930C00CC0035 /* SimpleTextureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B4261A2088930C00CC0035 /* SimpleTextureViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		A6B42613208870C500CC0035 /* AEAGLContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEAGLContext.m; sourceTree = "<group>"; };
 		A6B42615208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKVertexAttribArrayBuffer.h; sourceTree = "<group>"; };
 		A6B42616208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttribArrayBuffer.m; sourceTree = "<group>"; };
+		A6B426192088930C00CC0035 /* SimpleTextureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTextureViewController.h; sourceTree = "<group>"; };
+		A6B4261A2088930C00CC0035 /* SimpleTextureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTextureViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,7 @@
 		A6B425FF208717E100CC0035 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A6B42618208892F300CC0035 /* SimpleTexture */,
 				A6B426082088341400CC0035 /* AGLKView */,
 				A6B42600208722F300CC0035 /* SimpleTriangle */,
 			);
@@ -191,6 +195,15 @@
 				A6B42616208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m */,
 			);
 			path = AGLKView;
+			sourceTree = "<group>";
+		};
+		A6B42618208892F300CC0035 /* SimpleTexture */ = {
+			isa = PBXGroup;
+			children = (
+				A6B426192088930C00CC0035 /* SimpleTextureViewController.h */,
+				A6B4261A2088930C00CC0035 /* SimpleTextureViewController.m */,
+			);
+			path = SimpleTexture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +344,7 @@
 				A6B4260E2088343B00CC0035 /* AGLKView.m in Sources */,
 				A6B4260B2088342400CC0035 /* AGLKViewViewController.m in Sources */,
 				A6B425CF2085DE1000CC0035 /* AppDelegate.m in Sources */,
+				A6B4261B2088930C00CC0035 /* SimpleTextureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
