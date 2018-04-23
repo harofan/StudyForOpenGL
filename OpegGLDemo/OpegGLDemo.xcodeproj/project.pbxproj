@@ -22,6 +22,9 @@
 		A6B42614208870C500CC0035 /* AEAGLContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42613208870C500CC0035 /* AEAGLContext.m */; };
 		A6B42617208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42616208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m */; };
 		A6B4261B2088930C00CC0035 /* SimpleTextureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B4261A2088930C00CC0035 /* SimpleTextureViewController.m */; };
+		A6B4261E2089C96E00CC0035 /* AGLKTextureInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B4261D2089C96E00CC0035 /* AGLKTextureInfo.m */; };
+		A6B426212089CA9D00CC0035 /* AGLKTextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B426202089CA9D00CC0035 /* AGLKTextureLoader.m */; };
+		A6B42624208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42623208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,12 @@
 		A6B42616208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttribArrayBuffer.m; sourceTree = "<group>"; };
 		A6B426192088930C00CC0035 /* SimpleTextureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTextureViewController.h; sourceTree = "<group>"; };
 		A6B4261A2088930C00CC0035 /* SimpleTextureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTextureViewController.m; sourceTree = "<group>"; };
+		A6B4261C2089C96E00CC0035 /* AGLKTextureInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKTextureInfo.h; sourceTree = "<group>"; };
+		A6B4261D2089C96E00CC0035 /* AGLKTextureInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKTextureInfo.m; sourceTree = "<group>"; };
+		A6B4261F2089CA9D00CC0035 /* AGLKTextureLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKTextureLoader.h; sourceTree = "<group>"; };
+		A6B426202089CA9D00CC0035 /* AGLKTextureLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKTextureLoader.m; sourceTree = "<group>"; };
+		A6B42622208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLKEffectPropertyTexture+AGLKAdditions.h"; sourceTree = "<group>"; };
+		A6B42623208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GLKEffectPropertyTexture+AGLKAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +211,12 @@
 			children = (
 				A6B426192088930C00CC0035 /* SimpleTextureViewController.h */,
 				A6B4261A2088930C00CC0035 /* SimpleTextureViewController.m */,
+				A6B4261C2089C96E00CC0035 /* AGLKTextureInfo.h */,
+				A6B4261D2089C96E00CC0035 /* AGLKTextureInfo.m */,
+				A6B4261F2089CA9D00CC0035 /* AGLKTextureLoader.h */,
+				A6B426202089CA9D00CC0035 /* AGLKTextureLoader.m */,
+				A6B42622208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.h */,
+				A6B42623208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m */,
 			);
 			path = SimpleTexture;
 			sourceTree = "<group>";
@@ -337,7 +352,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6B426032087230C00CC0035 /* SimpleTriangleViewController.m in Sources */,
+				A6B42624208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m in Sources */,
 				A6B425D22085DE1000CC0035 /* ViewController.m in Sources */,
+				A6B4261E2089C96E00CC0035 /* AGLKTextureInfo.m in Sources */,
 				A6B42614208870C500CC0035 /* AEAGLContext.m in Sources */,
 				A6B425DD2085DE1100CC0035 /* main.m in Sources */,
 				A6B42617208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m in Sources */,
@@ -345,6 +362,7 @@
 				A6B4260B2088342400CC0035 /* AGLKViewViewController.m in Sources */,
 				A6B425CF2085DE1000CC0035 /* AppDelegate.m in Sources */,
 				A6B4261B2088930C00CC0035 /* SimpleTextureViewController.m in Sources */,
+				A6B426212089CA9D00CC0035 /* AGLKTextureLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

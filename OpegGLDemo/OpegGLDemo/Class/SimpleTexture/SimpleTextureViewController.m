@@ -33,6 +33,7 @@ static const SceneVertex vertices[] =
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.view.backgroundColor = [UIColor blackColor];
     [self p_startOpegGL];
 }
 

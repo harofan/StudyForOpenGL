@@ -28,4 +28,8 @@
 - (void)drawArrayWithMode:(GLenum)mode
          startVertexIndex:(GLint)first
          numberOfVertices:(GLsizei)count;
+
+- (void)reinitWithAttribStride:(GLsizeiptr)stride
+              numberOfVertices:(GLsizei)count
+                         bytes:(const GLvoid *)dataPtr;
 @end
