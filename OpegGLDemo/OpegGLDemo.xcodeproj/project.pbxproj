@@ -25,6 +25,7 @@
 		A6B4261E2089C96E00CC0035 /* AGLKTextureInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B4261D2089C96E00CC0035 /* AGLKTextureInfo.m */; };
 		A6B426212089CA9D00CC0035 /* AGLKTextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B426202089CA9D00CC0035 /* AGLKTextureLoader.m */; };
 		A6B42624208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42623208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m */; };
+		A6B42629208DC36B00CC0035 /* MultipleTexturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42627208DC36B00CC0035 /* MultipleTexturesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		A6B426202089CA9D00CC0035 /* AGLKTextureLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKTextureLoader.m; sourceTree = "<group>"; };
 		A6B42622208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLKEffectPropertyTexture+AGLKAdditions.h"; sourceTree = "<group>"; };
 		A6B42623208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GLKEffectPropertyTexture+AGLKAdditions.m"; sourceTree = "<group>"; };
+		A6B42626208DC36B00CC0035 /* MultipleTexturesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleTexturesViewController.h; sourceTree = "<group>"; };
+		A6B42627208DC36B00CC0035 /* MultipleTexturesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleTexturesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,7 @@
 		A6B425FF208717E100CC0035 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A6B42625208DC35100CC0035 /* MultipleTextures */,
 				A6B42618208892F300CC0035 /* SimpleTexture */,
 				A6B426082088341400CC0035 /* AGLKView */,
 				A6B42600208722F300CC0035 /* SimpleTriangle */,
@@ -219,6 +223,15 @@
 				A6B42623208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m */,
 			);
 			path = SimpleTexture;
+			sourceTree = "<group>";
+		};
+		A6B42625208DC35100CC0035 /* MultipleTextures */ = {
+			isa = PBXGroup;
+			children = (
+				A6B42626208DC36B00CC0035 /* MultipleTexturesViewController.h */,
+				A6B42627208DC36B00CC0035 /* MultipleTexturesViewController.m */,
+			);
+			path = MultipleTextures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +373,7 @@
 				A6B42617208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m in Sources */,
 				A6B4260E2088343B00CC0035 /* AGLKView.m in Sources */,
 				A6B4260B2088342400CC0035 /* AGLKViewViewController.m in Sources */,
+				A6B42629208DC36B00CC0035 /* MultipleTexturesViewController.m in Sources */,
 				A6B425CF2085DE1000CC0035 /* AppDelegate.m in Sources */,
 				A6B4261B2088930C00CC0035 /* SimpleTextureViewController.m in Sources */,
 				A6B426212089CA9D00CC0035 /* AGLKTextureLoader.m in Sources */,
@@ -534,6 +548,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V3P7E8N222;
 				INFOPLIST_FILE = OpegGLDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -551,6 +566,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V3P7E8N222;
 				INFOPLIST_FILE = OpegGLDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

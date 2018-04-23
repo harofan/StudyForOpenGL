@@ -94,6 +94,7 @@ static const SceneVertex vertices[] =
         GLKTextureInfo *textureInfo = [GLKTextureLoader textureWithCGImage:imageRef
                                                                    options:nil//怎么解析图像加载
                                                                      error:NULL];
+        
         //GLKBaseEffect提供了使用纹理做渲染的内建支持
         _baseEffect.texture2d0.name = textureInfo.name;
         _baseEffect.texture2d0.target = textureInfo.target;

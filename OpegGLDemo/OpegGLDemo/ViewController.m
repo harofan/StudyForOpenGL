@@ -10,6 +10,7 @@
 #import "SimpleTriangleViewController.h"
 #import "AGLKViewViewController.h"
 #import "SimpleTextureViewController.h"
+#import "MultipleTexturesViewController.h"
 
 
 #define ScreenWidth         [[UIScreen mainScreen] bounds].size.width
@@ -59,6 +60,12 @@
         }
             break;
             
+        case 3:
+        {
+            MultipleTexturesViewController *vc = [[MultipleTexturesViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            
         default:
             break;
     }
@@ -82,7 +89,7 @@
 #pragma mark - set && get
 - (NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@"简单三角形的渲染", @"自定义一个glview", @"渲染一个简单的纹理"];
+        _dataArray = @[@"简单三角形的渲染", @"自定义一个glview", @"渲染一个简单的纹理", @"渲染一个多重混合纹理"];
     }
     return _dataArray;
 }
