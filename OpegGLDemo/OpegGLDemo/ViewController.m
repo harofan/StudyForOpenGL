@@ -10,6 +10,7 @@
 #import "SimpleTriangleViewController.h"
 #import "AGLKViewViewController.h"
 #import "SimpleTextureViewController.h"
+#import "MixedFragmentViewController.h"
 #import "MultipleTexturesViewController.h"
 
 
@@ -62,6 +63,12 @@
             
         case 3:
         {
+            MixedFragmentViewController *vc = [[MixedFragmentViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            
+            case 4:
+        {
             MultipleTexturesViewController *vc = [[MultipleTexturesViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
@@ -89,7 +96,7 @@
 #pragma mark - set && get
 - (NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@"简单三角形的渲染", @"自定义一个glview", @"渲染一个简单的纹理", @"渲染一个多重混合纹理"];
+        _dataArray = @[@"简单三角形的渲染", @"自定义一个glview", @"渲染一个简单的纹理", @"混合片元", @"多重纹理"];
     }
     return _dataArray;
 }

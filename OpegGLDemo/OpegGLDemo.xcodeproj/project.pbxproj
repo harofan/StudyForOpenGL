@@ -26,6 +26,7 @@
 		A6B426212089CA9D00CC0035 /* AGLKTextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B426202089CA9D00CC0035 /* AGLKTextureLoader.m */; };
 		A6B42624208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42623208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m */; };
 		A6B42629208DC36B00CC0035 /* MultipleTexturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42627208DC36B00CC0035 /* MultipleTexturesViewController.m */; };
+		A6B4262E208EDBE300CC0035 /* MixedFragmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B4262D208EDBE300CC0035 /* MixedFragmentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		A6B42623208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GLKEffectPropertyTexture+AGLKAdditions.m"; sourceTree = "<group>"; };
 		A6B42626208DC36B00CC0035 /* MultipleTexturesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleTexturesViewController.h; sourceTree = "<group>"; };
 		A6B42627208DC36B00CC0035 /* MultipleTexturesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleTexturesViewController.m; sourceTree = "<group>"; };
+		A6B4262C208EDBE300CC0035 /* MixedFragmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MixedFragmentViewController.h; sourceTree = "<group>"; };
+		A6B4262D208EDBE300CC0035 /* MixedFragmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MixedFragmentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,7 @@
 		A6B425FF208717E100CC0035 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A6B4262B208EDBD300CC0035 /* MixedFragment */,
 				A6B42625208DC35100CC0035 /* MultipleTextures */,
 				A6B42618208892F300CC0035 /* SimpleTexture */,
 				A6B426082088341400CC0035 /* AGLKView */,
@@ -232,6 +236,15 @@
 				A6B42627208DC36B00CC0035 /* MultipleTexturesViewController.m */,
 			);
 			path = MultipleTextures;
+			sourceTree = "<group>";
+		};
+		A6B4262B208EDBD300CC0035 /* MixedFragment */ = {
+			isa = PBXGroup;
+			children = (
+				A6B4262C208EDBE300CC0035 /* MixedFragmentViewController.h */,
+				A6B4262D208EDBE300CC0035 /* MixedFragmentViewController.m */,
+			);
+			path = MixedFragment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6B4262E208EDBE300CC0035 /* MixedFragmentViewController.m in Sources */,
 				A6B426032087230C00CC0035 /* SimpleTriangleViewController.m in Sources */,
 				A6B42624208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m in Sources */,
 				A6B425D22085DE1000CC0035 /* ViewController.m in Sources */,

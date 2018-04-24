@@ -1,12 +1,12 @@
 //
-//  MultipleTexturesViewController.m
+//  MixedFragmentViewController.m
 //  OpegGLDemo
 //
-//  Created by 范杨 on 2018/4/23.
+//  Created by 范杨 on 2018/4/24.
 //  Copyright © 2018年 RPGLiker. All rights reserved.
 //
 
-#import "MultipleTexturesViewController.h"
+#import "MixedFragmentViewController.h"
 #import <GLKit/GLKit.h>
 #import "AGLKVertexAttribArrayBuffer.h"
 
@@ -25,19 +25,21 @@ static const SceneVertex vertices[] =
     {{ 1.0f,  0.67f, 0.0f}, {1.0f, 1.0f}},
 };
 
-@interface MultipleTexturesViewController ()<GLKViewDelegate>
+@interface MixedFragmentViewController ()<GLKViewDelegate>
 
 @property (strong, nonatomic) AGLKVertexAttribArrayBuffer *vertexBuffer;
 @property (strong, nonatomic) GLKBaseEffect *baseEffect;
 @property (strong, nonatomic) GLKTextureInfo *textureInfo0;
 @property (strong, nonatomic) GLKTextureInfo *textureInfo1;
+
 @end
 
-@implementation MultipleTexturesViewController
+@implementation MixedFragmentViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-
+    
     self.view.backgroundColor = [UIColor blackColor];
     [self p_startOpegGL];
 }
@@ -69,18 +71,18 @@ static const SceneVertex vertices[] =
     //GLKTextureLoaderOriginBottomLeft 翻转Y坐标
     CGImageRef imageRef0 = [[UIImage imageNamed:@"leaves"] CGImage];
     self.textureInfo0 = [GLKTextureLoader textureWithCGImage:imageRef0
-                         options:[NSDictionary dictionaryWithObjectsAndKeys:
-                                  [NSNumber numberWithBool:YES],
-                                  GLKTextureLoaderOriginBottomLeft, nil]
-                         error:NULL];
+                                                     options:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                              [NSNumber numberWithBool:YES],
+                                                              GLKTextureLoaderOriginBottomLeft, nil]
+                                                       error:NULL];
     
     //设置纹理1
     CGImageRef imageRef1 = [[UIImage imageNamed:@"beetle"] CGImage];
     self.textureInfo1 = [GLKTextureLoader textureWithCGImage:imageRef1
-                         options:[NSDictionary dictionaryWithObjectsAndKeys:
-                                  [NSNumber numberWithBool:YES],
-                                  GLKTextureLoaderOriginBottomLeft, nil]
-                         error:NULL];
+                                                     options:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                              [NSNumber numberWithBool:YES],
+                                                              GLKTextureLoaderOriginBottomLeft, nil]
+                                                       error:NULL];
     
     //混合片元颜色
     glEnable(GL_BLEND);
@@ -101,7 +103,7 @@ static const SceneVertex vertices[] =
                             numberOfCordinates:2
                                   attribOffset:offsetof(SceneVertex, textureCoords)
                                   shouldEnable:YES];
-
+    
     self.baseEffect.texture2d0.name = self.textureInfo0.name;
     self.baseEffect.texture2d0.target = self.textureInfo0.target;
     [self.baseEffect prepareToDraw];
@@ -123,7 +125,7 @@ static const SceneVertex vertices[] =
 
 #pragma mark - set && get
 - (GLKBaseEffect *)baseEffect{
-
+    
     if (!_baseEffect) {
         //省去自己编写一个小的GPU程序
         _baseEffect = [[GLKBaseEffect alloc] init];
@@ -132,9 +134,10 @@ static const SceneVertex vertices[] =
                                                    1.0f,//Green
                                                    1.0f,//Blue
                                                    1.0f);//Alpha
-
+        
     }
     return _baseEffect;
 }
+
 
 @end
