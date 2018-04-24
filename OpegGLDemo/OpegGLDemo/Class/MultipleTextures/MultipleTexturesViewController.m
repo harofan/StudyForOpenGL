@@ -29,8 +29,8 @@ static const SceneVertex vertices[] =
 
 @property (strong, nonatomic) AGLKVertexAttribArrayBuffer *vertexBuffer;
 @property (strong, nonatomic) GLKBaseEffect *baseEffect;
-@property (strong, nonatomic) GLKTextureInfo *textureInfo0;
-@property (strong, nonatomic) GLKTextureInfo *textureInfo1;
+//@property (strong, nonatomic) GLKTextureInfo *textureInfo0;
+//@property (strong, nonatomic) GLKTextureInfo *textureInfo1;
 @end
 
 @implementation MultipleTexturesViewController
@@ -65,28 +65,32 @@ static const SceneVertex vertices[] =
                                                                             usage:GL_STATIC_DRAW];
     
     //设置纹理0
-    //这里不要自作聪明用完就将他释放,也不要在dealloc里释放,否则会莫名奇妙的崩溃
-    //GLKTextureLoaderOriginBottomLeft 翻转Y坐标
     CGImageRef imageRef0 = [[UIImage imageNamed:@"leaves"] CGImage];
-    self.textureInfo0 = [GLKTextureLoader textureWithCGImage:imageRef0
+    GLKTextureInfo *textureInfo0 = [GLKTextureLoader textureWithCGImage:imageRef0
                          options:[NSDictionary dictionaryWithObjectsAndKeys:
                                   [NSNumber numberWithBool:YES],
                                   GLKTextureLoaderOriginBottomLeft, nil]
                          error:NULL];
+    self.baseEffect.texture2d0.name = textureInfo0.name;
+    self.baseEffect.texture2d0.target = textureInfo0.target;
     
     //设置纹理1
     CGImageRef imageRef1 = [[UIImage imageNamed:@"beetle"] CGImage];
-    self.textureInfo1 = [GLKTextureLoader textureWithCGImage:imageRef1
+    GLKTextureInfo *textureInfo1 = [GLKTextureLoader textureWithCGImage:imageRef1
                          options:[NSDictionary dictionaryWithObjectsAndKeys:
                                   [NSNumber numberWithBool:YES],
                                   GLKTextureLoaderOriginBottomLeft, nil]
                          error:NULL];
+    self.baseEffect.texture2d1.name = textureInfo1.name;
+    self.baseEffect.texture2d1.target = textureInfo1.target;
     
-    //混合片元颜色
-    glEnable(GL_BLEND);
-    //最常用的混合模式,第一个参数指定每个片元的最终颜色元素怎么影响混合的
-    //第二个参数用于指定在目标帧缓存中已经存在的颜色元素怎么影响混合
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    //多重纹理模式,一般情况下这个mode的效果最好
+    //这里必须要设置texture2d1的,否则效果就像是我们把叶子的纹理渲染到虫子上一般,
+    //texture2d0可以不设置,不设置的话我们就会看不到下面的白底
+//    self.baseEffect.texture2d0.envMode = GLKTextureEnvModeDecal;
+    self.baseEffect.texture2d1.envMode = GLKTextureEnvModeDecal;
+    
+
 }
 #pragma mark - delegate
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect{
@@ -96,23 +100,19 @@ static const SceneVertex vertices[] =
                             numberOfCordinates:3
                                   attribOffset:offsetof(SceneVertex, positionCoords)
                                   shouldEnable:YES];
-    //纹理数据
+    
+    //树叶纹理数据
     [self.vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribTexCoord0
                             numberOfCordinates:2
                                   attribOffset:offsetof(SceneVertex, textureCoords)
                                   shouldEnable:YES];
+    
+    //昆虫纹理数据
+    [self.vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribTexCoord1
+                            numberOfCordinates:2
+                                  attribOffset:offsetof(SceneVertex, textureCoords)
+                                  shouldEnable:YES];
 
-    self.baseEffect.texture2d0.name = self.textureInfo0.name;
-    self.baseEffect.texture2d0.target = self.textureInfo0.target;
-    [self.baseEffect prepareToDraw];
-    
-    //画三角形
-    [self.vertexBuffer drawArrayWithMode:GL_TRIANGLES
-                        startVertexIndex:0
-                        numberOfVertices:sizeof(vertices) / sizeof(SceneVertex)];
-    
-    self.baseEffect.texture2d0.name = self.textureInfo1.name;
-    self.baseEffect.texture2d0.target = self.textureInfo1.target;
     [self.baseEffect prepareToDraw];
     
     //渲染纹理
