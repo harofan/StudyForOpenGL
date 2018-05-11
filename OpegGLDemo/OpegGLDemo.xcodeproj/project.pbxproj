@@ -27,6 +27,11 @@
 		A6B42624208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42623208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m */; };
 		A6B42629208DC36B00CC0035 /* MultipleTexturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42627208DC36B00CC0035 /* MultipleTexturesViewController.m */; };
 		A6B4262E208EDBE300CC0035 /* MixedFragmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B4262D208EDBE300CC0035 /* MixedFragmentViewController.m */; };
+		A6B42632208F0BA000CC0035 /* CustomTexturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42631208F0BA000CC0035 /* CustomTexturesViewController.m */; };
+		A6B42635208F1D9B00CC0035 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A6B42633208F1D9B00CC0035 /* Shader.fsh */; };
+		A6B42636208F1D9B00CC0035 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = A6B42634208F1D9B00CC0035 /* Shader.vsh */; };
+		A6FBE4CE20A52DFD00083C31 /* SimpleLightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FBE4CC20A52DFD00083C31 /* SimpleLightViewController.m */; };
+		A6FBE4CF20A52DFD00083C31 /* SimpleLightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6FBE4CD20A52DFD00083C31 /* SimpleLightViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +91,13 @@
 		A6B42627208DC36B00CC0035 /* MultipleTexturesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleTexturesViewController.m; sourceTree = "<group>"; };
 		A6B4262C208EDBE300CC0035 /* MixedFragmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MixedFragmentViewController.h; sourceTree = "<group>"; };
 		A6B4262D208EDBE300CC0035 /* MixedFragmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MixedFragmentViewController.m; sourceTree = "<group>"; };
+		A6B42630208F0BA000CC0035 /* CustomTexturesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTexturesViewController.h; sourceTree = "<group>"; };
+		A6B42631208F0BA000CC0035 /* CustomTexturesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTexturesViewController.m; sourceTree = "<group>"; };
+		A6B42633208F1D9B00CC0035 /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
+		A6B42634208F1D9B00CC0035 /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
+		A6FBE4CB20A52DFD00083C31 /* SimpleLightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleLightViewController.h; sourceTree = "<group>"; };
+		A6FBE4CC20A52DFD00083C31 /* SimpleLightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleLightViewController.m; sourceTree = "<group>"; };
+		A6FBE4CD20A52DFD00083C31 /* SimpleLightViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleLightViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +185,8 @@
 		A6B425FF208717E100CC0035 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A6FBE4CA20A52DDE00083C31 /* SimpleLight */,
+				A6B4262F208F0B8F00CC0035 /* CustomTextures */,
 				A6B4262B208EDBD300CC0035 /* MixedFragment */,
 				A6B42625208DC35100CC0035 /* MultipleTextures */,
 				A6B42618208892F300CC0035 /* SimpleTexture */,
@@ -245,6 +259,27 @@
 				A6B4262D208EDBE300CC0035 /* MixedFragmentViewController.m */,
 			);
 			path = MixedFragment;
+			sourceTree = "<group>";
+		};
+		A6B4262F208F0B8F00CC0035 /* CustomTextures */ = {
+			isa = PBXGroup;
+			children = (
+				A6B42630208F0BA000CC0035 /* CustomTexturesViewController.h */,
+				A6B42631208F0BA000CC0035 /* CustomTexturesViewController.m */,
+				A6B42633208F1D9B00CC0035 /* Shader.fsh */,
+				A6B42634208F1D9B00CC0035 /* Shader.vsh */,
+			);
+			path = CustomTextures;
+			sourceTree = "<group>";
+		};
+		A6FBE4CA20A52DDE00083C31 /* SimpleLight */ = {
+			isa = PBXGroup;
+			children = (
+				A6FBE4CB20A52DFD00083C31 /* SimpleLightViewController.h */,
+				A6FBE4CC20A52DFD00083C31 /* SimpleLightViewController.m */,
+				A6FBE4CD20A52DFD00083C31 /* SimpleLightViewController.xib */,
+			);
+			path = SimpleLight;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,9 +385,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6B42635208F1D9B00CC0035 /* Shader.fsh in Resources */,
+				A6FBE4CF20A52DFD00083C31 /* SimpleLightViewController.xib in Resources */,
 				A6B425DA2085DE1100CC0035 /* LaunchScreen.storyboard in Resources */,
 				A6B425D72085DE1100CC0035 /* Assets.xcassets in Resources */,
 				A6B425D52085DE1000CC0035 /* Main.storyboard in Resources */,
+				A6B42636208F1D9B00CC0035 /* Shader.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,11 +416,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6B4262E208EDBE300CC0035 /* MixedFragmentViewController.m in Sources */,
+				A6B42632208F0BA000CC0035 /* CustomTexturesViewController.m in Sources */,
 				A6B426032087230C00CC0035 /* SimpleTriangleViewController.m in Sources */,
 				A6B42624208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m in Sources */,
 				A6B425D22085DE1000CC0035 /* ViewController.m in Sources */,
 				A6B4261E2089C96E00CC0035 /* AGLKTextureInfo.m in Sources */,
 				A6B42614208870C500CC0035 /* AEAGLContext.m in Sources */,
+				A6FBE4CE20A52DFD00083C31 /* SimpleLightViewController.m in Sources */,
 				A6B425DD2085DE1100CC0035 /* main.m in Sources */,
 				A6B42617208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m in Sources */,
 				A6B4260E2088343B00CC0035 /* AGLKView.m in Sources */,

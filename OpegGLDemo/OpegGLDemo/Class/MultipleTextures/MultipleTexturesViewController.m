@@ -29,8 +29,6 @@ static const SceneVertex vertices[] =
 
 @property (strong, nonatomic) AGLKVertexAttribArrayBuffer *vertexBuffer;
 @property (strong, nonatomic) GLKBaseEffect *baseEffect;
-//@property (strong, nonatomic) GLKTextureInfo *textureInfo0;
-//@property (strong, nonatomic) GLKTextureInfo *textureInfo1;
 @end
 
 @implementation MultipleTexturesViewController
@@ -55,7 +53,6 @@ static const SceneVertex vertices[] =
     glkView.delegate = self;
     [self.view addSubview:glkView];
     [EAGLContext setCurrentContext:glkView.context];
-    
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     
     //使用自己封装的一个OpegnGL渲染工具类帮助我们进行操作

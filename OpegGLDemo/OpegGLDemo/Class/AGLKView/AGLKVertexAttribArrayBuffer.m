@@ -21,9 +21,9 @@
                       data:(const GLvoid *)dataPtr
                      usage:(GLenum)usage{
     
-    NSParameterAssert(0 < stride);
-    NSParameterAssert(0 < count);
-    NSParameterAssert(NULL != dataPtr);
+//    NSParameterAssert(0 < stride);
+//    NSParameterAssert(0 < count);
+//    NSParameterAssert(NULL != dataPtr);
     
     if (nil != (self = [super init])) {
         _stride = stride;
