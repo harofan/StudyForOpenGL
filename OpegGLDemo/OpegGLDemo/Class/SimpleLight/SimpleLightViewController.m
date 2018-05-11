@@ -278,8 +278,7 @@ static void SceneTrianglesUpdateVertexNormals(SceneTriangle someTriangles[NUM_FA
         faceNormals[i] = SceneTriangleFaceNormal(someTriangles[i]);
     }
     
-    // Average each of the vertex normals with the face normals of
-    // the 4 adjacent vertices
+    //重新计算侧面四个三角的法线
     newVertexA.normal = faceNormals[0];
     newVertexB.normal = GLKVector3MultiplyScalar(GLKVector3Add(GLKVector3Add(GLKVector3Add(faceNormals[0],faceNormals[1]),faceNormals[2]),faceNormals[3]), 0.25);
     newVertexC.normal = faceNormals[1];
@@ -290,8 +289,7 @@ static void SceneTrianglesUpdateVertexNormals(SceneTriangle someTriangles[NUM_FA
     newVertexH.normal = GLKVector3MultiplyScalar(GLKVector3Add(GLKVector3Add(GLKVector3Add(faceNormals[4],faceNormals[5]),faceNormals[6]),faceNormals[7]), 0.25);
     newVertexI.normal = faceNormals[7];
     
-    // Recreate the triangles for the scene using the new
-    // vertices that have recalculated normals
+    //重新计算八个三角形,实际只计算了以e为顶点的四个
     someTriangles[0] = SceneTriangleMake(newVertexA, newVertexB, newVertexD);
     someTriangles[1] = SceneTriangleMake(newVertexB, newVertexC, newVertexF);
     someTriangles[2] = SceneTriangleMake(newVertexD, newVertexB, newVertexE);
@@ -302,7 +300,9 @@ static void SceneTrianglesUpdateVertexNormals(SceneTriangle someTriangles[NUM_FA
     someTriangles[7] = SceneTriangleMake(newVertexH, newVertexF, newVertexI);
 }
 
-
+/**
+ 返回三角形法向量
+ */
 static GLKVector3 SceneTriangleFaceNormal(const SceneTriangle triangle)
 {
     GLKVector3 vectorA = GLKVector3Subtract(triangle.vertices[1].position,
@@ -310,10 +310,11 @@ static GLKVector3 SceneTriangleFaceNormal(const SceneTriangle triangle)
     GLKVector3 vectorB = GLKVector3Subtract(triangle.vertices[2].position,
                                             triangle.vertices[0].position);
     
-    return SceneVector3UnitNormal(vectorA,
-                                  vectorB);
+    return SceneVector3UnitNormal(vectorA,vectorB);
 }
-
+/**
+ 获取三角形
+ */
 static SceneTriangle SceneTriangleMake(const SceneVertex vertexA,
                                        const SceneVertex vertexB,
                                        const SceneVertex vertexC){
@@ -325,7 +326,9 @@ static SceneTriangle SceneTriangleMake(const SceneVertex vertexA,
     
     return result;
 }
-
+/**
+ 这个函数初始化了包含了8个三角形的法向量和表示光方向的线的线的顶点的值。
+ */
 static void SceneTrianglesNormalLinesUpdate(const SceneTriangle someTriangles[NUM_FACES],
                                              GLKVector3 lightPosition,
                                              GLKVector3 someNormalLineVertices[NUM_LINE_VERTS]){
@@ -353,7 +356,9 @@ static void SceneTrianglesNormalLinesUpdate(const SceneTriangle someTriangles[NU
     
     someNormalLineVertices[lineVetexIndex] = GLKVector3Make(0.0, 0.0, -0.5);
 }
-
+/**
+ 计算8个三角形的面法向量，然后用三角形的面法向量对每个三角形顶点的法向量进行更新。
+ */
 static void SceneTrianglesUpdateFaceNormals(SceneTriangle someTriangles[NUM_FACES])
 {
     int i;
@@ -365,7 +370,9 @@ static void SceneTrianglesUpdateFaceNormals(SceneTriangle someTriangles[NUM_FACE
         someTriangles[i].vertices[2].normal = faceNormal;
     }
 }
-
+/**
+ 法线单位向量
+ */
 GLKVector3 SceneVector3UnitNormal(const GLKVector3 vectorA,
                                   const GLKVector3 vectorB)
 {
