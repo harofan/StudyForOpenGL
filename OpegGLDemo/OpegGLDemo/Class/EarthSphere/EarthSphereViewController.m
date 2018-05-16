@@ -64,13 +64,14 @@
                                                                                          data:sphereTexCoords
                                                                                         usage:GL_STATIC_DRAW];
     
+    //使用深度缓存,这样人眼看不到的背面就不会渲染了
     glEnable(GL_DEPTH_TEST);
-
+    
     //不再调一次视图的y坐标就还有问题
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [glkView display];
     });
-
+    
 }
 
 - (void)dealloc{
@@ -87,7 +88,7 @@
     
     [self.baseEffect prepareToDraw];
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
-
+    
     [self.vertexPositionBuffer prepareToDrawWithAttrib:GLKVertexAttribPosition
                                     numberOfCordinates:3
                                           attribOffset:0
@@ -105,8 +106,8 @@
     const GLfloat  aspectRatio = (GLfloat)view.drawableWidth / (GLfloat)view.drawableHeight;
     //X Z方向上为1.0则不变换
     self.baseEffect.transform.projectionMatrix = GLKMatrix4MakeScale(1.0f, aspectRatio, 1.0f);
-
+    
     glDrawArrays(GL_TRIANGLES, 0, sphereNumVerts);
-
+    
 }
 @end
