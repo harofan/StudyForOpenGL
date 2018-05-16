@@ -14,6 +14,7 @@
 #import "MultipleTexturesViewController.h"
 #import "CustomTexturesViewController.h"
 #import "SimpleLightViewController.h"
+#import "EarthSphereViewController.h"
 
 
 #define ScreenWidth         [[UIScreen mainScreen] bounds].size.width
@@ -89,6 +90,14 @@
             SimpleLightViewController *vc = [[SimpleLightViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
+            break;
+            
+            case 7:
+        {
+            EarthSphereViewController *vc = [[EarthSphereViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -113,7 +122,7 @@
 #pragma mark - set && get
 - (NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@"简单三角形的渲染", @"自定义一个glview", @"渲染一个简单的纹理", @"混合片元", @"多重纹理", @"自定义纹理", @"简单灯光"];
+        _dataArray = @[@"简单三角形的渲染", @"自定义一个glview", @"渲染一个简单的纹理", @"混合片元", @"多重纹理", @"自定义纹理", @"简单灯光", @"地球渲染"];
     }
     return _dataArray;
 }

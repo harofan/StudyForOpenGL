@@ -147,7 +147,7 @@ static  GLKVector3 SceneVector3UnitNormal(const GLKVector3 vectorA,
                                                                  numberOfVertices:sizeof(_triangles)/sizeof(SceneVertex)
                                                                              data:_triangles
                                                                             usage:GL_DYNAMIC_DRAW];
-
+    
     //法线
     self.extraBuffer = [[AGLKVertexAttribArrayBuffer alloc] initWithAttribStride:sizeof(SceneVertex)
                                                                 numberOfVertices:0
@@ -218,7 +218,7 @@ static  GLKVector3 SceneVector3UnitNormal(const GLKVector3 vectorA,
                            numberOfCordinates:3
                                  attribOffset:0
                                  shouldEnable:YES];
-
+    
     
     //不要使用光线这样就可以展示线条的颜色
     self.extraEffect.useConstantColor = GL_TRUE;
@@ -330,8 +330,8 @@ static SceneTriangle SceneTriangleMake(const SceneVertex vertexA,
  这个函数初始化了包含了8个三角形的法向量和表示光方向的线的线的顶点的值。
  */
 static void SceneTrianglesNormalLinesUpdate(const SceneTriangle someTriangles[NUM_FACES],
-                                             GLKVector3 lightPosition,
-                                             GLKVector3 someNormalLineVertices[NUM_LINE_VERTS]){
+                                            GLKVector3 lightPosition,
+                                            GLKVector3 someNormalLineVertices[NUM_LINE_VERTS]){
     int trianglesIndex;
     int lineVetexIndex = 0;
     
@@ -409,7 +409,7 @@ GLKVector3 SceneVector3UnitNormal(const GLKVector3 vectorA,
     [self p_updateNormals];
 }
 - (void)setShouldUseFaceNormals:(BOOL)shouldUseFaceNormals{
-
+    
     if (_shouldUseFaceNormals != shouldUseFaceNormals) {
         _shouldUseFaceNormals = shouldUseFaceNormals;
         [self p_updateNormals];
