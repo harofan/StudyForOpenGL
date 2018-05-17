@@ -67,7 +67,7 @@ typedef NS_ENUM(NSInteger, SceneTransformationAxisSelector){
     self.baseEffect.light0.ambientColor = GLKVector4Make(0.4f, 0.4f, 0.4f, 1.0f);
     self.baseEffect.light0.position = GLKVector4Make(1.0f, 0.8f, 0.4f, 0.0f);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-
+    
     self.vertexPositionBuffer = [[AGLKVertexAttribArrayBuffer alloc] initWithAttribStride:(3 * sizeof(GLfloat))
                                                                          numberOfVertices:sizeof(lowPolyAxesAndModels2Verts) / (3 * sizeof(GLfloat))
                                                                                      data:lowPolyAxesAndModels2Verts
@@ -76,10 +76,10 @@ typedef NS_ENUM(NSInteger, SceneTransformationAxisSelector){
                                                                        numberOfVertices:sizeof(lowPolyAxesAndModels2Normals) / (3 * sizeof(GLfloat))
                                                                                    data:lowPolyAxesAndModels2Normals
                                                                                   usage:GL_STATIC_DRAW];
-
+    
     glEnable(GL_DEPTH_TEST);
     
-    //坐标系变换
+    //坐标系变换,改变视角
     GLKMatrix4 modelviewMatrix = GLKMatrix4MakeRotation(GLKMathDegreesToRadians(30.0f),
                                                         1.0,  // Rotate about X axis
                                                         0.0,
@@ -93,14 +93,16 @@ typedef NS_ENUM(NSInteger, SceneTransformationAxisSelector){
                                           -0.25,
                                           0.0,
                                           -0.20);
-
+    
     self.baseEffect.transform.modelviewMatrix = modelviewMatrix;
+    
     glEnable(GL_BLEND);
+    //表示把渲染的图像融合到目标区域。也就是说源的每一个像素的alpha都等于自己的alpha，目标的每一个像素的alpha等于1减去该位置源像素的alpha。 因此不论叠加多少次，亮度是不变的。
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
 
 - (void)dealloc{
-
+    
     self.vertexPositionBuffer = nil;
     self.vertexNormalBuffer = nil;
     
@@ -111,19 +113,19 @@ typedef NS_ENUM(NSInteger, SceneTransformationAxisSelector){
 #pragma mark - delegate
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect{
     
-    //变换
+    //变换比例
     const GLfloat aspectRatio = (GLfloat)view.drawableWidth / (GLfloat)view.drawableHeight;
     self.baseEffect.transform.projectionMatrix = GLKMatrix4MakeOrtho(-0.5 * aspectRatio,
-                                                                    0.5 * aspectRatio,
-                                                                    -0.5,
-                                                                    0.5,
-                                                                    -5.0,
-                                                                    5.0);
+                                                                     0.5 * aspectRatio,
+                                                                     -0.5,
+                                                                     0.5,
+                                                                     -5.0,
+                                                                     5.0);
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
     
     [self.vertexPositionBuffer prepareToDrawWithAttrib:GLKVertexAttribPosition numberOfCordinates:3 attribOffset:0 shouldEnable:YES];
     [self.vertexNormalBuffer prepareToDrawWithAttrib:GLKVertexAttribNormal numberOfCordinates:3 attribOffset:0 shouldEnable:YES];
-
+    
     //保存当前Modelview矩阵
     GLKMatrix4 savedModelviewMatrix = self.baseEffect.transform.modelviewMatrix;
     
@@ -139,7 +141,7 @@ typedef NS_ENUM(NSInteger, SceneTransformationAxisSelector){
     self.baseEffect.light0.diffuseColor = GLKVector4Make(1.0f, 1.0f, 1.0f, 1.0f);
     [self.baseEffect prepareToDraw];
     glDrawArrays(GL_TRIANGLES, 0, lowPolyAxesAndModels2NumVerts);
-
+    
     
     // 准备绘制坐标系变换迁的矩阵
     self.baseEffect.transform.modelviewMatrix =
@@ -186,7 +188,7 @@ typedef NS_ENUM(NSInteger, SceneTransformationAxisSelector){
     _transform2Axis = [sender selectedSegmentIndex];
 }
 - (IBAction)takeThirdTransformDirection:(UISegmentedControl *)sender {
-_transform3Axis = [sender selectedSegmentIndex];
+    _transform3Axis = [sender selectedSegmentIndex];
 }
 
 /**
