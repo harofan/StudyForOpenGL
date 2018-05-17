@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BasicTransformViewController">
+            <connections>
+                <outlet property="firstSlider" destination="jK4-Ri-wbV" id="QWu-il-lEP"/>
+                <outlet property="secondSlider" destination="WJw-c4-qcl" id="7DU-bZ-T1N"/>
+                <outlet property="thirdSlider" destination="cty-Ir-gwe" id="pFm-cF-Sy0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="STz-iT-nhc">
+                    <rect key="frame" x="15" y="550" width="90" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="2eF-W1-gGz"/>
+                        <constraint firstAttribute="height" constant="24" id="YmD-pV-oKt"/>
+                    </constraints>
+                    <segments>
+                        <segment title="T"/>
+                        <segment title="R"/>
+                        <segment title="S"/>
+                    </segments>
+                    <connections>
+                        <action selector="takeFirstTransformType:" destination="-1" eventType="valueChanged" id="EL5-fh-Vbc"/>
+                    </connections>
+                </segmentedControl>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FCe-VA-vXL">
+                    <rect key="frame" x="15" y="589" width="90" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="U2n-u7-6h3"/>
+                        <constraint firstAttribute="height" constant="24" id="vik-F6-K8M"/>
+                    </constraints>
+                    <segments>
+                        <segment title="T"/>
+                        <segment title="R"/>
+                        <segment title="S"/>
+                    </segments>
+                    <connections>
+                        <action selector="takeSecondTransformType:" destination="-1" eventType="valueChanged" id="Gbv-Uh-dR1"/>
+                    </connections>
+                </segmentedControl>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="24o-uS-LIo">
+                    <rect key="frame" x="15" y="628" width="90" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="SCu-lk-puZ"/>
+                        <constraint firstAttribute="height" constant="24" id="l5n-lr-7yC"/>
+                    </constraints>
+                    <segments>
+                        <segment title="T"/>
+                        <segment title="R"/>
+                        <segment title="S"/>
+                    </segments>
+                    <connections>
+                        <action selector="takeThirdTransformType:" destination="-1" eventType="valueChanged" id="Jkd-7v-1jf"/>
+                    </connections>
+                </segmentedControl>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="efi-YJ-lai">
+                    <rect key="frame" x="125" y="550" width="90" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="EY2-yJ-U5S"/>
+                        <constraint firstAttribute="height" constant="24" id="wih-3T-crJ"/>
+                    </constraints>
+                    <segments>
+                        <segment title="X"/>
+                        <segment title="Y"/>
+                        <segment title="Z"/>
+                    </segments>
+                    <connections>
+                        <action selector="takeFirstTransformDirection:" destination="-1" eventType="valueChanged" id="a5e-10-IZZ"/>
+                    </connections>
+                </segmentedControl>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yyA-24-VVx">
+                    <rect key="frame" x="125" y="589" width="90" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="0uu-dE-pjZ"/>
+                        <constraint firstAttribute="height" constant="24" id="PkC-Tb-DBz"/>
+                    </constraints>
+                    <segments>
+                        <segment title="X"/>
+                        <segment title="Y"/>
+                        <segment title="Z"/>
+                    </segments>
+                    <connections>
+                        <action selector="takeSecondTransformDirection:" destination="-1" eventType="valueChanged" id="9jI-u7-136"/>
+                    </connections>
+                </segmentedControl>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KwK-cg-kdM">
+                    <rect key="frame" x="125" y="628" width="90" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="P0c-XW-Ooe"/>
+                        <constraint firstAttribute="height" constant="24" id="ppu-L3-faA"/>
+                    </constraints>
+                    <segments>
+                        <segment title="X"/>
+                        <segment title="Y"/>
+                        <segment title="Z"/>
+                    </segments>
+                    <connections>
+                        <action selector="takeThirdTransformDirection:" destination="-1" eventType="valueChanged" id="LG7-eY-W4v"/>
+                    </connections>
+                </segmentedControl>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jK4-Ri-wbV">
+                    <rect key="frame" x="228" y="546.5" width="134" height="31"/>
+                    <connections>
+                        <action selector="changeFirstSlider:" destination="-1" eventType="valueChanged" id="bcX-XU-c4P"/>
+                    </connections>
+                </slider>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cty-Ir-gwe">
+                    <rect key="frame" x="228" y="625" width="134" height="31"/>
+                    <connections>
+                        <action selector="changeThirdSlider:" destination="-1" eventType="valueChanged" id="fog-5G-kIb"/>
+                    </connections>
+                </slider>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXn-ib-eyO">
+                    <rect key="frame" x="321" y="35" width="39" height="30"/>
+                    <state key="normal" title="Reset"/>
+                    <connections>
+                        <action selector="didClickResetButton:" destination="-1" eventType="touchUpInside" id="K9Y-bq-ZdX"/>
+                    </connections>
+                </button>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WJw-c4-qcl">
+                    <rect key="frame" x="228" y="585.5" width="134" height="31"/>
+                    <connections>
+                        <action selector="changeSecondSlider:" destination="-1" eventType="valueChanged" id="Cz3-Df-iI6"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="24o-uS-LIo" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="5Gr-xL-grn"/>
+                <constraint firstItem="WJw-c4-qcl" firstAttribute="leading" secondItem="cty-Ir-gwe" secondAttribute="leading" id="6KN-1E-DVg"/>
+                <constraint firstItem="cty-Ir-gwe" firstAttribute="centerY" secondItem="KwK-cg-kdM" secondAttribute="centerY" id="6ct-tl-yOY"/>
+                <constraint firstItem="jK4-Ri-wbV" firstAttribute="centerY" secondItem="efi-YJ-lai" secondAttribute="centerY" id="7U2-Y2-0A7"/>
+                <constraint firstItem="efi-YJ-lai" firstAttribute="leading" secondItem="yyA-24-VVx" secondAttribute="leading" id="8rv-8x-RH2"/>
+                <constraint firstItem="KwK-cg-kdM" firstAttribute="top" secondItem="yyA-24-VVx" secondAttribute="bottom" constant="15" id="A4i-Ul-eHb"/>
+                <constraint firstItem="yyA-24-VVx" firstAttribute="leading" secondItem="KwK-cg-kdM" secondAttribute="leading" id="FHf-md-MtC"/>
+                <constraint firstItem="WJw-c4-qcl" firstAttribute="trailing" secondItem="cty-Ir-gwe" secondAttribute="trailing" id="GkV-2B-hAE"/>
+                <constraint firstItem="WJw-c4-qcl" firstAttribute="centerY" secondItem="yyA-24-VVx" secondAttribute="centerY" id="IXu-q3-Fcs"/>
+                <constraint firstItem="yyA-24-VVx" firstAttribute="top" secondItem="efi-YJ-lai" secondAttribute="bottom" constant="15" id="T8S-rx-eWV"/>
+                <constraint firstItem="jK4-Ri-wbV" firstAttribute="leading" secondItem="WJw-c4-qcl" secondAttribute="leading" id="WdN-Ur-uKg"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="cty-Ir-gwe" secondAttribute="trailing" constant="15" id="YP5-3f-jGo"/>
+                <constraint firstItem="STz-iT-nhc" firstAttribute="leading" secondItem="FCe-VA-vXL" secondAttribute="leading" id="YlW-2s-ceC"/>
+                <constraint firstItem="24o-uS-LIo" firstAttribute="top" secondItem="FCe-VA-vXL" secondAttribute="bottom" constant="15" id="aau-Cf-pDK"/>
+                <constraint firstItem="cty-Ir-gwe" firstAttribute="leading" secondItem="KwK-cg-kdM" secondAttribute="trailing" constant="15" id="dyj-0Z-fWg"/>
+                <constraint firstItem="QXn-ib-eyO" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="15" id="hNo-vy-MXK"/>
+                <constraint firstItem="FCe-VA-vXL" firstAttribute="leading" secondItem="24o-uS-LIo" secondAttribute="leading" id="mHt-O2-gnQ"/>
+                <constraint firstItem="KwK-cg-kdM" firstAttribute="leading" secondItem="24o-uS-LIo" secondAttribute="trailing" constant="20" id="ohM-Mg-ttG"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="24o-uS-LIo" secondAttribute="bottom" constant="15" id="p2D-ZW-oS7"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="KwK-cg-kdM" secondAttribute="bottom" constant="15" id="sha-6k-Dq3"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="QXn-ib-eyO" secondAttribute="trailing" constant="15" id="uf9-SC-9Lm"/>
+                <constraint firstItem="jK4-Ri-wbV" firstAttribute="trailing" secondItem="WJw-c4-qcl" secondAttribute="trailing" id="uj0-wY-HZP"/>
+                <constraint firstItem="FCe-VA-vXL" firstAttribute="top" secondItem="STz-iT-nhc" secondAttribute="bottom" constant="15" id="xJV-92-zRp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="-551" y="23"/>
+        </view>
+    </objects>
+</document>
