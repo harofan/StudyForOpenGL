@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A605CE5920AE81B0001A0DF0 /* TextureTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A605CE5720AE81B0001A0DF0 /* TextureTransformViewController.m */; };
+		A605CE5A20AE81B0001A0DF0 /* TextureTransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A605CE5820AE81B0001A0DF0 /* TextureTransformViewController.xib */; };
+		A605CE5D20AE832A001A0DF0 /* AGLKTextureTransformBaseEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = A605CE5C20AE832A001A0DF0 /* AGLKTextureTransformBaseEffect.m */; };
+		A605CE6620AEA540001A0DF0 /* AGLKPointParticleShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A605CE6020AEA540001A0DF0 /* AGLKPointParticleShader.fsh */; };
+		A605CE6720AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = A605CE6120AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.vsh */; };
+		A605CE6820AEA540001A0DF0 /* AGLKSkyboxShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A605CE6220AEA540001A0DF0 /* AGLKSkyboxShader.fsh */; };
+		A605CE6920AEA540001A0DF0 /* AGLKPointParticleShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = A605CE6320AEA540001A0DF0 /* AGLKPointParticleShader.vsh */; };
+		A605CE6A20AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A605CE6420AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.fsh */; };
+		A605CE6B20AEA540001A0DF0 /* AGLKSkyboxShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = A605CE6520AEA540001A0DF0 /* AGLKSkyboxShader.vsh */; };
 		A61416DC20AD24D300EADA0D /* BasicTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A61416DA20AD24D300EADA0D /* BasicTransformViewController.m */; };
 		A61416DD20AD24D300EADA0D /* BasicTransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61416DB20AD24D300EADA0D /* BasicTransformViewController.xib */; };
 		A62C310020ABD2C50050C7A6 /* Earth512x256.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A62C30FF20ABD2C50050C7A6 /* Earth512x256.jpg */; };
@@ -57,6 +66,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A605CE5620AE81B0001A0DF0 /* TextureTransformViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureTransformViewController.h; sourceTree = "<group>"; };
+		A605CE5720AE81B0001A0DF0 /* TextureTransformViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextureTransformViewController.m; sourceTree = "<group>"; };
+		A605CE5820AE81B0001A0DF0 /* TextureTransformViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextureTransformViewController.xib; sourceTree = "<group>"; };
+		A605CE5B20AE832A001A0DF0 /* AGLKTextureTransformBaseEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKTextureTransformBaseEffect.h; sourceTree = "<group>"; };
+		A605CE5C20AE832A001A0DF0 /* AGLKTextureTransformBaseEffect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKTextureTransformBaseEffect.m; sourceTree = "<group>"; };
+		A605CE6020AEA540001A0DF0 /* AGLKPointParticleShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AGLKPointParticleShader.fsh; sourceTree = "<group>"; };
+		A605CE6120AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AGLKTextureMatrix2PointLightShader.vsh; sourceTree = "<group>"; };
+		A605CE6220AEA540001A0DF0 /* AGLKSkyboxShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AGLKSkyboxShader.fsh; sourceTree = "<group>"; };
+		A605CE6320AEA540001A0DF0 /* AGLKPointParticleShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AGLKPointParticleShader.vsh; sourceTree = "<group>"; };
+		A605CE6420AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AGLKTextureMatrix2PointLightShader.fsh; sourceTree = "<group>"; };
+		A605CE6520AEA540001A0DF0 /* AGLKSkyboxShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AGLKSkyboxShader.vsh; sourceTree = "<group>"; };
 		A61416D920AD24D300EADA0D /* BasicTransformViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicTransformViewController.h; sourceTree = "<group>"; };
 		A61416DA20AD24D300EADA0D /* BasicTransformViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicTransformViewController.m; sourceTree = "<group>"; };
 		A61416DB20AD24D300EADA0D /* BasicTransformViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTransformViewController.xib; sourceTree = "<group>"; };
@@ -140,6 +160,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A605CE5520AE8185001A0DF0 /* TextureTransform */ = {
+			isa = PBXGroup;
+			children = (
+				A605CE5620AE81B0001A0DF0 /* TextureTransformViewController.h */,
+				A605CE5720AE81B0001A0DF0 /* TextureTransformViewController.m */,
+				A605CE5820AE81B0001A0DF0 /* TextureTransformViewController.xib */,
+			);
+			path = TextureTransform;
+			sourceTree = "<group>";
+		};
+		A605CE5E20AEA517001A0DF0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A605CE5F20AEA540001A0DF0 /* Shaders */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A605CE5F20AEA540001A0DF0 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				A605CE6020AEA540001A0DF0 /* AGLKPointParticleShader.fsh */,
+				A605CE6120AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.vsh */,
+				A605CE6220AEA540001A0DF0 /* AGLKSkyboxShader.fsh */,
+				A605CE6320AEA540001A0DF0 /* AGLKPointParticleShader.vsh */,
+				A605CE6420AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.fsh */,
+				A605CE6520AEA540001A0DF0 /* AGLKSkyboxShader.vsh */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
 		A61416D820AD24B800EADA0D /* BasicTransform */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +238,7 @@
 		A6B425CC2085DE1000CC0035 /* OpegGLDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A605CE5E20AEA517001A0DF0 /* Resource */,
 				A6B425FF208717E100CC0035 /* Class */,
 				A6B425CD2085DE1000CC0035 /* AppDelegate.h */,
 				A6B425CE2085DE1000CC0035 /* AppDelegate.m */,
@@ -222,6 +274,7 @@
 		A6B425FF208717E100CC0035 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A605CE5520AE8185001A0DF0 /* TextureTransform */,
 				A61416D820AD24B800EADA0D /* BasicTransform */,
 				A668224620AADE5500BE07CE /* EarthSphere */,
 				A6FBE4CA20A52DDE00083C31 /* SimpleLight */,
@@ -263,6 +316,8 @@
 				A6B42613208870C500CC0035 /* AEAGLContext.m */,
 				A6B42615208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.h */,
 				A6B42616208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m */,
+				A605CE5B20AE832A001A0DF0 /* AGLKTextureTransformBaseEffect.h */,
+				A605CE5C20AE832A001A0DF0 /* AGLKTextureTransformBaseEffect.m */,
 			);
 			path = AGLKView;
 			sourceTree = "<group>";
@@ -425,14 +480,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				A61416DD20AD24D300EADA0D /* BasicTransformViewController.xib in Resources */,
+				A605CE6720AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.vsh in Resources */,
 				A62C310020ABD2C50050C7A6 /* Earth512x256.jpg in Resources */,
 				A668224B20AADE6A00BE07CE /* EarthSphereViewController.xib in Resources */,
 				A6B42635208F1D9B00CC0035 /* Shader.fsh in Resources */,
+				A605CE6620AEA540001A0DF0 /* AGLKPointParticleShader.fsh in Resources */,
+				A605CE6820AEA540001A0DF0 /* AGLKSkyboxShader.fsh in Resources */,
 				A6FBE4CF20A52DFD00083C31 /* SimpleLightViewController.xib in Resources */,
 				A6B425DA2085DE1100CC0035 /* LaunchScreen.storyboard in Resources */,
+				A605CE6B20AEA540001A0DF0 /* AGLKSkyboxShader.vsh in Resources */,
 				A6B425D72085DE1100CC0035 /* Assets.xcassets in Resources */,
+				A605CE6920AEA540001A0DF0 /* AGLKPointParticleShader.vsh in Resources */,
+				A605CE6A20AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.fsh in Resources */,
 				A6B425D52085DE1000CC0035 /* Main.storyboard in Resources */,
 				A6B42636208F1D9B00CC0035 /* Shader.vsh in Resources */,
+				A605CE5A20AE81B0001A0DF0 /* TextureTransformViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,11 +525,13 @@
 				A6B42624208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m in Sources */,
 				A6B425D22085DE1000CC0035 /* ViewController.m in Sources */,
 				A6B4261E2089C96E00CC0035 /* AGLKTextureInfo.m in Sources */,
+				A605CE5D20AE832A001A0DF0 /* AGLKTextureTransformBaseEffect.m in Sources */,
 				A61416DC20AD24D300EADA0D /* BasicTransformViewController.m in Sources */,
 				A668224A20AADE6A00BE07CE /* EarthSphereViewController.m in Sources */,
 				A6B42614208870C500CC0035 /* AEAGLContext.m in Sources */,
 				A6FBE4CE20A52DFD00083C31 /* SimpleLightViewController.m in Sources */,
 				A6B425DD2085DE1100CC0035 /* main.m in Sources */,
+				A605CE5920AE81B0001A0DF0 /* TextureTransformViewController.m in Sources */,
 				A6B42617208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m in Sources */,
 				A6B4260E2088343B00CC0035 /* AGLKView.m in Sources */,
 				A6B4260B2088342400CC0035 /* AGLKViewViewController.m in Sources */,

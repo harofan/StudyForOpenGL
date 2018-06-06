@@ -16,6 +16,7 @@
 #import "SimpleLightViewController.h"
 #import "EarthSphereViewController.h"
 #import "BasicTransformViewController.h"
+#import "TextureTransformViewController.h"
 
 #define ScreenWidth         [[UIScreen mainScreen] bounds].size.width
 #define ScreenHeight        [[UIScreen mainScreen] bounds].size.height
@@ -106,6 +107,13 @@
         }
             break;
             
+            case 9:
+        {
+            TextureTransformViewController *vc = [[TextureTransformViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
         default:
             break;
     }
@@ -129,7 +137,7 @@
 #pragma mark - set && get
 - (NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@"简单三角形的渲染", @"自定义一个glview", @"渲染一个简单的纹理", @"混合片元", @"多重纹理", @"自定义纹理", @"简单灯光", @"地球渲染", @"基本变换"];
+        _dataArray = @[@"简单三角形的渲染", @"自定义一个glview", @"渲染一个简单的纹理", @"混合片元", @"多重纹理", @"自定义纹理", @"简单灯光", @"地球渲染", @"基本变换", @"纹理的变换"];
     }
     return _dataArray;
 }

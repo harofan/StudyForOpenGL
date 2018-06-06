@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextureTransformViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="scale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quC-3a-blk">
+                    <rect key="frame" x="15" y="595" width="40" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rotate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmb-oj-rg3">
+                    <rect key="frame" x="15" y="631" width="46" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-180" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="RwJ-bv-lem">
+                    <rect key="frame" x="74" y="626.5" width="288" height="31"/>
+                    <connections>
+                        <action selector="changeRotateSlider:" destination="-1" eventType="valueChanged" id="QFs-p6-9bm"/>
+                    </connections>
+                </slider>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.33000001311302202" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="lxr-cj-E0O">
+                    <rect key="frame" x="74" y="590.5" width="288" height="31"/>
+                    <connections>
+                        <action selector="changeScaleSlider:" destination="-1" eventType="valueChanged" id="mK2-HM-XIm"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Vmb-oj-rg3" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="6Zj-AW-prB"/>
+                <constraint firstItem="RwJ-bv-lem" firstAttribute="centerY" secondItem="Vmb-oj-rg3" secondAttribute="centerY" id="AHY-gN-q8u"/>
+                <constraint firstItem="quC-3a-blk" firstAttribute="leading" secondItem="Vmb-oj-rg3" secondAttribute="leading" id="Abr-j1-8jc"/>
+                <constraint firstItem="Vmb-oj-rg3" firstAttribute="top" secondItem="quC-3a-blk" secondAttribute="bottom" constant="15" id="Cm0-Lg-oYW"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="Vmb-oj-rg3" secondAttribute="bottom" constant="15" id="HAm-6q-T7t"/>
+                <constraint firstItem="lxr-cj-E0O" firstAttribute="centerY" secondItem="quC-3a-blk" secondAttribute="centerY" id="Les-LZ-pNU"/>
+                <constraint firstItem="RwJ-bv-lem" firstAttribute="leading" secondItem="Vmb-oj-rg3" secondAttribute="trailing" constant="15" id="cCz-wU-rIi"/>
+                <constraint firstItem="lxr-cj-E0O" firstAttribute="leading" secondItem="RwJ-bv-lem" secondAttribute="leading" id="deh-IH-9ah"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="RwJ-bv-lem" secondAttribute="trailing" constant="15" id="oMh-Gu-GoV"/>
+                <constraint firstItem="lxr-cj-E0O" firstAttribute="trailing" secondItem="RwJ-bv-lem" secondAttribute="trailing" id="rDF-vv-e6V"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>
