@@ -19,8 +19,11 @@
 		A61416DC20AD24D300EADA0D /* BasicTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A61416DA20AD24D300EADA0D /* BasicTransformViewController.m */; };
 		A61416DD20AD24D300EADA0D /* BasicTransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61416DB20AD24D300EADA0D /* BasicTransformViewController.xib */; };
 		A62C310020ABD2C50050C7A6 /* Earth512x256.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A62C30FF20ABD2C50050C7A6 /* Earth512x256.jpg */; };
+		A65B311E20E9F3AB0090AD55 /* PerspectiveTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65B311C20E9F3AB0090AD55 /* PerspectiveTransformViewController.m */; };
+		A65B311F20E9F3AB0090AD55 /* PerspectiveTransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65B311D20E9F3AB0090AD55 /* PerspectiveTransformViewController.xib */; };
 		A668224A20AADE6A00BE07CE /* EarthSphereViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A668224820AADE6A00BE07CE /* EarthSphereViewController.m */; };
 		A668224B20AADE6A00BE07CE /* EarthSphereViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A668224920AADE6A00BE07CE /* EarthSphereViewController.xib */; };
+		A6B2ED1120EB085800A21D14 /* Moon256x128.png in Resources */ = {isa = PBXBuildFile; fileRef = A6B2ED1020EB085800A21D14 /* Moon256x128.png */; };
 		A6B425CF2085DE1000CC0035 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B425CE2085DE1000CC0035 /* AppDelegate.m */; };
 		A6B425D22085DE1000CC0035 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B425D12085DE1000CC0035 /* ViewController.m */; };
 		A6B425D52085DE1000CC0035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6B425D32085DE1000CC0035 /* Main.storyboard */; };
@@ -82,10 +85,15 @@
 		A61416DB20AD24D300EADA0D /* BasicTransformViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTransformViewController.xib; sourceTree = "<group>"; };
 		A61416DE20AD657300EADA0D /* lowPolyAxesAndModels2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lowPolyAxesAndModels2.h; sourceTree = "<group>"; };
 		A62C30FF20ABD2C50050C7A6 /* Earth512x256.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Earth512x256.jpg; sourceTree = "<group>"; };
+		A65B311B20E9F3AB0090AD55 /* PerspectiveTransformViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerspectiveTransformViewController.h; sourceTree = "<group>"; };
+		A65B311C20E9F3AB0090AD55 /* PerspectiveTransformViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerspectiveTransformViewController.m; sourceTree = "<group>"; };
+		A65B311D20E9F3AB0090AD55 /* PerspectiveTransformViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerspectiveTransformViewController.xib; sourceTree = "<group>"; };
+		A65B312020E9FCCB0090AD55 /* PerspectiveTransformSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerspectiveTransformSphere.h; sourceTree = "<group>"; };
+		A65B312120E9FE720090AD55 /* EarthSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarthSphere.h; sourceTree = "<group>"; };
 		A668224720AADE6A00BE07CE /* EarthSphereViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EarthSphereViewController.h; sourceTree = "<group>"; };
 		A668224820AADE6A00BE07CE /* EarthSphereViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EarthSphereViewController.m; sourceTree = "<group>"; };
 		A668224920AADE6A00BE07CE /* EarthSphereViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EarthSphereViewController.xib; sourceTree = "<group>"; };
-		A668224C20AADF3800BE07CE /* sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sphere.h; sourceTree = "<group>"; };
+		A6B2ED1020EB085800A21D14 /* Moon256x128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon256x128.png; sourceTree = "<group>"; };
 		A6B425CA2085DE1000CC0035 /* OpegGLDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpegGLDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B425CD2085DE1000CC0035 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6B425CE2085DE1000CC0035 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -202,11 +210,23 @@
 			path = BasicTransform;
 			sourceTree = "<group>";
 		};
+		A65B311A20E9F38D0090AD55 /* PerspectiveTransform */ = {
+			isa = PBXGroup;
+			children = (
+				A6B2ED1020EB085800A21D14 /* Moon256x128.png */,
+				A65B312020E9FCCB0090AD55 /* PerspectiveTransformSphere.h */,
+				A65B311B20E9F3AB0090AD55 /* PerspectiveTransformViewController.h */,
+				A65B311C20E9F3AB0090AD55 /* PerspectiveTransformViewController.m */,
+				A65B311D20E9F3AB0090AD55 /* PerspectiveTransformViewController.xib */,
+			);
+			path = PerspectiveTransform;
+			sourceTree = "<group>";
+		};
 		A668224620AADE5500BE07CE /* EarthSphere */ = {
 			isa = PBXGroup;
 			children = (
+				A65B312120E9FE720090AD55 /* EarthSphere.h */,
 				A62C30FF20ABD2C50050C7A6 /* Earth512x256.jpg */,
-				A668224C20AADF3800BE07CE /* sphere.h */,
 				A668224720AADE6A00BE07CE /* EarthSphereViewController.h */,
 				A668224820AADE6A00BE07CE /* EarthSphereViewController.m */,
 				A668224920AADE6A00BE07CE /* EarthSphereViewController.xib */,
@@ -274,6 +294,7 @@
 		A6B425FF208717E100CC0035 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A65B311A20E9F38D0090AD55 /* PerspectiveTransform */,
 				A605CE5520AE8185001A0DF0 /* TextureTransform */,
 				A61416D820AD24B800EADA0D /* BasicTransform */,
 				A668224620AADE5500BE07CE /* EarthSphere */,
@@ -486,6 +507,8 @@
 				A6B42635208F1D9B00CC0035 /* Shader.fsh in Resources */,
 				A605CE6620AEA540001A0DF0 /* AGLKPointParticleShader.fsh in Resources */,
 				A605CE6820AEA540001A0DF0 /* AGLKSkyboxShader.fsh in Resources */,
+				A6B2ED1120EB085800A21D14 /* Moon256x128.png in Resources */,
+				A65B311F20E9F3AB0090AD55 /* PerspectiveTransformViewController.xib in Resources */,
 				A6FBE4CF20A52DFD00083C31 /* SimpleLightViewController.xib in Resources */,
 				A6B425DA2085DE1100CC0035 /* LaunchScreen.storyboard in Resources */,
 				A605CE6B20AEA540001A0DF0 /* AGLKSkyboxShader.vsh in Resources */,
@@ -531,6 +554,7 @@
 				A6B42614208870C500CC0035 /* AEAGLContext.m in Sources */,
 				A6FBE4CE20A52DFD00083C31 /* SimpleLightViewController.m in Sources */,
 				A6B425DD2085DE1100CC0035 /* main.m in Sources */,
+				A65B311E20E9F3AB0090AD55 /* PerspectiveTransformViewController.m in Sources */,
 				A605CE5920AE81B0001A0DF0 /* TextureTransformViewController.m in Sources */,
 				A6B42617208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m in Sources */,
 				A6B4260E2088343B00CC0035 /* AGLKView.m in Sources */,

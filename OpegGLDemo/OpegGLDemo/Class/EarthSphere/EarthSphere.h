@@ -9,9 +9,9 @@ texture coords : 390
 
 */
 
-unsigned int sphereNumVerts = 1944;
+unsigned int earthSphereNumVerts = 1944;
 
-float sphereVerts [] = {
+float earthSphereVerts [] = {
   // f 28/1/1 1/2/2 21/3/3
   7.6687116638888e-09, 0.466097, 0.115308018404908,
   -0.0265919923312883, 0.466097, 0.112200018404908,
@@ -2606,7 +2606,7 @@ float sphereVerts [] = {
   0.0394375076687117, -0.490272, 0.166400518404908,
 };
 
-float sphereNormals [] = {
+float earthSphereNormals [] = {
   // f 28/1/1 1/2/2 21/3/3
   -0.00802618948953466, 0.967367838494132, 0.253248978930753,
   -0.0662268425664943, 0.967371914269316, 0.244551803932402,
@@ -5201,7 +5201,7 @@ float sphereNormals [] = {
   0.0891781381121659, -0.939606064036581, 0.330435627783284,
 };
 
-float sphereTexCoords [] = {
+float earthSphereTexCoords [] = {
   // f 28/1/1 1/2/2 21/3/3
   0.000000, 0.925926,
   0.037037, 0.925926,

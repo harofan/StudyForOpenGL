@@ -9,7 +9,7 @@
 #import "EarthSphereViewController.h"
 #import <GLKit/GLKit.h>
 #import "AGLKVertexAttribArrayBuffer.h"
-#import "sphere.h"//顶点数据
+#import "EarthSphere.h"//顶点数据
 
 @interface EarthSphereViewController ()<GLKViewDelegate>
 @property (strong, nonatomic) GLKBaseEffect *baseEffect;
@@ -52,16 +52,16 @@
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     
     self.vertexPositionBuffer = [[AGLKVertexAttribArrayBuffer alloc] initWithAttribStride:(3 * sizeof(GLfloat))
-                                                                         numberOfVertices:sizeof(sphereVerts) / (3 * sizeof(GLfloat))
-                                                                                     data:sphereVerts
+                                                                         numberOfVertices:sizeof(earthSphereVerts) / (3 * sizeof(GLfloat))
+                                                                                     data:earthSphereVerts
                                                                                     usage:GL_STATIC_DRAW];
     self.vertexNormalBuffer = [[AGLKVertexAttribArrayBuffer alloc] initWithAttribStride:(3 * sizeof(GLfloat))
-                                                                       numberOfVertices:sizeof(sphereNormals) / (3 * sizeof(GLfloat))
-                                                                                   data:sphereNormals
+                                                                       numberOfVertices:sizeof(earthSphereNormals) / (3 * sizeof(GLfloat))
+                                                                                   data:earthSphereNormals
                                                                                   usage:GL_STATIC_DRAW];
     self.vertexTextureCoordBuffer = [[AGLKVertexAttribArrayBuffer alloc] initWithAttribStride:(2 * sizeof(GLfloat))
-                                                                             numberOfVertices:sizeof(sphereTexCoords) / (2 * sizeof(GLfloat))
-                                                                                         data:sphereTexCoords
+                                                                             numberOfVertices:sizeof(earthSphereTexCoords) / (2 * sizeof(GLfloat))
+                                                                                         data:earthSphereTexCoords
                                                                                         usage:GL_STATIC_DRAW];
     
     //使用深度缓存,这样人眼看不到的背面就不会渲染了
@@ -107,7 +107,7 @@
     //X Z方向上为1.0则不变换
     self.baseEffect.transform.projectionMatrix = GLKMatrix4MakeScale(1.0f, aspectRatio, 1.0f);
     
-    glDrawArrays(GL_TRIANGLES, 0, sphereNumVerts);
+    glDrawArrays(GL_TRIANGLES, 0, earthSphereNumVerts);
     
 }
 @end

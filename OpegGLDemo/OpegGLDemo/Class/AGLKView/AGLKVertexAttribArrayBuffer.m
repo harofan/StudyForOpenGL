@@ -85,6 +85,13 @@
                  GL_DYNAMIC_DRAW);
 }
 
++ (void)drawPreparedArraysWithMode:(GLenum)mode
+                  startVertexIndex:(GLint)first
+                  numberOfVertices:(GLsizei)count;
+{
+    glDrawArrays(mode, first, count); // Step 6
+}
+
 - (void)dealloc{
     if (0 != _glName) {
         glDeleteBuffers(1, &_glName);

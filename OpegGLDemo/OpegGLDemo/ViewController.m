@@ -17,6 +17,7 @@
 #import "EarthSphereViewController.h"
 #import "BasicTransformViewController.h"
 #import "TextureTransformViewController.h"
+#import "PerspectiveTransformViewController.h"
 
 #define ScreenWidth         [[UIScreen mainScreen] bounds].size.width
 #define ScreenHeight        [[UIScreen mainScreen] bounds].size.height
@@ -29,6 +30,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initView];
+}
+
+//是否可以旋转
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+//支持的方向
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
 #pragma mark - UI
 - (void)initView{
@@ -72,45 +84,53 @@
         }
             break;
             
-            case 4:
+        case 4:
         {
             MultipleTexturesViewController *vc = [[MultipleTexturesViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
             
-            case 5:
+        case 5:
         {
             CustomTexturesViewController *vc = [[CustomTexturesViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
             
-            case 6:
+        case 6:
         {
             SimpleLightViewController *vc = [[SimpleLightViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
             
-            case 7:
+        case 7:
         {
             EarthSphereViewController *vc = [[EarthSphereViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
             
-            case 8:
+        case 8:
         {
             BasicTransformViewController *vc = [[BasicTransformViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
             
-            case 9:
+        case 9:
         {
             TextureTransformViewController *vc = [[TextureTransformViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        case 10:
+        {
+            PerspectiveTransformViewController *vc = [PerspectiveTransformViewController new];
+            [self presentViewController:vc animated:YES completion:nil];
+//            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
             
@@ -137,7 +157,7 @@
 #pragma mark - set && get
 - (NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@"简单三角形的渲染", @"自定义一个glview", @"渲染一个简单的纹理", @"混合片元", @"多重纹理", @"自定义纹理", @"简单灯光", @"地球渲染", @"基本变换", @"纹理的变换"];
+        _dataArray = @[@"简单三角形的渲染", @"自定义一个glview", @"渲染一个简单的纹理", @"混合片元", @"多重纹理", @"自定义纹理", @"简单灯光", @"地球渲染", @"基本变换", @"纹理的变换", @"透明变换"];
     }
     return _dataArray;
 }
