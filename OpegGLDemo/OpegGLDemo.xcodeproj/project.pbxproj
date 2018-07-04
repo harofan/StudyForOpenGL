@@ -16,6 +16,13 @@
 		A605CE6920AEA540001A0DF0 /* AGLKPointParticleShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = A605CE6320AEA540001A0DF0 /* AGLKPointParticleShader.vsh */; };
 		A605CE6A20AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A605CE6420AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.fsh */; };
 		A605CE6B20AEA540001A0DF0 /* AGLKSkyboxShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = A605CE6520AEA540001A0DF0 /* AGLKSkyboxShader.vsh */; };
+		A613A32620EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A613A32420EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.m */; };
+		A613A32720EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A613A32520EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.xib */; };
+		A613A32A20EB4B44006CCD0C /* SceneCar.m in Sources */ = {isa = PBXBuildFile; fileRef = A613A32820EB4B44006CCD0C /* SceneCar.m */; };
+		A613A32D20EB4B93006CCD0C /* SceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A613A32C20EB4B93006CCD0C /* SceneModel.m */; };
+		A613A33020EB4BA4006CCD0C /* SceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = A613A32F20EB4BA4006CCD0C /* SceneMesh.m */; };
+		A613A33320EB596D006CCD0C /* SceneCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A613A33120EB596D006CCD0C /* SceneCarModel.m */; };
+		A613A33620EB5982006CCD0C /* SceneRinkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A613A33520EB5982006CCD0C /* SceneRinkModel.m */; };
 		A61416DC20AD24D300EADA0D /* BasicTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A61416DA20AD24D300EADA0D /* BasicTransformViewController.m */; };
 		A61416DD20AD24D300EADA0D /* BasicTransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61416DB20AD24D300EADA0D /* BasicTransformViewController.xib */; };
 		A62C310020ABD2C50050C7A6 /* Earth512x256.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A62C30FF20ABD2C50050C7A6 /* Earth512x256.jpg */; };
@@ -80,6 +87,21 @@
 		A605CE6320AEA540001A0DF0 /* AGLKPointParticleShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AGLKPointParticleShader.vsh; sourceTree = "<group>"; };
 		A605CE6420AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AGLKTextureMatrix2PointLightShader.fsh; sourceTree = "<group>"; };
 		A605CE6520AEA540001A0DF0 /* AGLKSkyboxShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AGLKSkyboxShader.vsh; sourceTree = "<group>"; };
+		A613A32320EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleMotionAnimationGLKViewController.h; sourceTree = "<group>"; };
+		A613A32420EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleMotionAnimationGLKViewController.m; sourceTree = "<group>"; };
+		A613A32520EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleMotionAnimationGLKViewController.xib; sourceTree = "<group>"; };
+		A613A32820EB4B44006CCD0C /* SceneCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneCar.m; sourceTree = "<group>"; };
+		A613A32920EB4B44006CCD0C /* SceneCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneCar.h; sourceTree = "<group>"; };
+		A613A32B20EB4B93006CCD0C /* SceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneModel.h; sourceTree = "<group>"; };
+		A613A32C20EB4B93006CCD0C /* SceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneModel.m; sourceTree = "<group>"; };
+		A613A32E20EB4BA4006CCD0C /* SceneMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneMesh.h; sourceTree = "<group>"; };
+		A613A32F20EB4BA4006CCD0C /* SceneMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneMesh.m; sourceTree = "<group>"; };
+		A613A33120EB596D006CCD0C /* SceneCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneCarModel.m; sourceTree = "<group>"; };
+		A613A33220EB596D006CCD0C /* SceneCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneCarModel.h; sourceTree = "<group>"; };
+		A613A33420EB597D006CCD0C /* SceneRinkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneRinkModel.h; sourceTree = "<group>"; };
+		A613A33520EB5982006CCD0C /* SceneRinkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneRinkModel.m; sourceTree = "<group>"; };
+		A613A33720EB59B2006CCD0C /* bumperCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bumperCar.h; sourceTree = "<group>"; };
+		A613A33820EB59C1006CCD0C /* bumperRink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bumperRink.h; sourceTree = "<group>"; };
 		A61416D920AD24D300EADA0D /* BasicTransformViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicTransformViewController.h; sourceTree = "<group>"; };
 		A61416DA20AD24D300EADA0D /* BasicTransformViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicTransformViewController.m; sourceTree = "<group>"; };
 		A61416DB20AD24D300EADA0D /* BasicTransformViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTransformViewController.xib; sourceTree = "<group>"; };
@@ -199,6 +221,28 @@
 			path = Shaders;
 			sourceTree = "<group>";
 		};
+		A613A32220EB45FC006CCD0C /* SimpleMotionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				A613A33720EB59B2006CCD0C /* bumperCar.h */,
+				A613A33820EB59C1006CCD0C /* bumperRink.h */,
+				A613A33420EB597D006CCD0C /* SceneRinkModel.h */,
+				A613A33520EB5982006CCD0C /* SceneRinkModel.m */,
+				A613A33220EB596D006CCD0C /* SceneCarModel.h */,
+				A613A33120EB596D006CCD0C /* SceneCarModel.m */,
+				A613A32E20EB4BA4006CCD0C /* SceneMesh.h */,
+				A613A32F20EB4BA4006CCD0C /* SceneMesh.m */,
+				A613A32B20EB4B93006CCD0C /* SceneModel.h */,
+				A613A32C20EB4B93006CCD0C /* SceneModel.m */,
+				A613A32920EB4B44006CCD0C /* SceneCar.h */,
+				A613A32820EB4B44006CCD0C /* SceneCar.m */,
+				A613A32320EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.h */,
+				A613A32420EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.m */,
+				A613A32520EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.xib */,
+			);
+			path = SimpleMotionAnimation;
+			sourceTree = "<group>";
+		};
 		A61416D820AD24B800EADA0D /* BasicTransform */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +338,7 @@
 		A6B425FF208717E100CC0035 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A613A32220EB45FC006CCD0C /* SimpleMotionAnimation */,
 				A65B311A20E9F38D0090AD55 /* PerspectiveTransform */,
 				A605CE5520AE8185001A0DF0 /* TextureTransform */,
 				A61416D820AD24B800EADA0D /* BasicTransform */,
@@ -506,6 +551,7 @@
 				A668224B20AADE6A00BE07CE /* EarthSphereViewController.xib in Resources */,
 				A6B42635208F1D9B00CC0035 /* Shader.fsh in Resources */,
 				A605CE6620AEA540001A0DF0 /* AGLKPointParticleShader.fsh in Resources */,
+				A613A32720EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.xib in Resources */,
 				A605CE6820AEA540001A0DF0 /* AGLKSkyboxShader.fsh in Resources */,
 				A6B2ED1120EB085800A21D14 /* Moon256x128.png in Resources */,
 				A65B311F20E9F3AB0090AD55 /* PerspectiveTransformViewController.xib in Resources */,
@@ -550,19 +596,25 @@
 				A6B4261E2089C96E00CC0035 /* AGLKTextureInfo.m in Sources */,
 				A605CE5D20AE832A001A0DF0 /* AGLKTextureTransformBaseEffect.m in Sources */,
 				A61416DC20AD24D300EADA0D /* BasicTransformViewController.m in Sources */,
+				A613A32620EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.m in Sources */,
 				A668224A20AADE6A00BE07CE /* EarthSphereViewController.m in Sources */,
 				A6B42614208870C500CC0035 /* AEAGLContext.m in Sources */,
 				A6FBE4CE20A52DFD00083C31 /* SimpleLightViewController.m in Sources */,
+				A613A33620EB5982006CCD0C /* SceneRinkModel.m in Sources */,
 				A6B425DD2085DE1100CC0035 /* main.m in Sources */,
 				A65B311E20E9F3AB0090AD55 /* PerspectiveTransformViewController.m in Sources */,
 				A605CE5920AE81B0001A0DF0 /* TextureTransformViewController.m in Sources */,
+				A613A33320EB596D006CCD0C /* SceneCarModel.m in Sources */,
 				A6B42617208875AD00CC0035 /* AGLKVertexAttribArrayBuffer.m in Sources */,
 				A6B4260E2088343B00CC0035 /* AGLKView.m in Sources */,
 				A6B4260B2088342400CC0035 /* AGLKViewViewController.m in Sources */,
 				A6B42629208DC36B00CC0035 /* MultipleTexturesViewController.m in Sources */,
+				A613A33020EB4BA4006CCD0C /* SceneMesh.m in Sources */,
 				A6B425CF2085DE1000CC0035 /* AppDelegate.m in Sources */,
 				A6B4261B2088930C00CC0035 /* SimpleTextureViewController.m in Sources */,
 				A6B426212089CA9D00CC0035 /* AGLKTextureLoader.m in Sources */,
+				A613A32D20EB4B93006CCD0C /* SceneModel.m in Sources */,
+				A613A32A20EB4B44006CCD0C /* SceneCar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

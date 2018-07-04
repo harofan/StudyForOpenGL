@@ -58,7 +58,7 @@ static const GLfloat kSceneMoonDistanceFromEarth = 3.0;
                                                                      1.0,//top
                                                                      1.0,//nearZ
                                                                      120.0);//farZ
-
+    
     //场景内模型显示位置坐标系
     self.baseEffect.transform.modelviewMatrix = GLKMatrix4MakeTranslation(0.0f, 0.0f, -5.0);
     
@@ -263,7 +263,7 @@ static const GLfloat kSceneMoonDistanceFromEarth = 3.0;
                                                                            -1.0,
                                                                            1.0,
                                                                            1.0,
-                                                                           120.0);
+                                                                           120.0);//far必须是正的,且大于near
     }else{
         //正视投影变换,近面较大
         self.baseEffect.transform.projectionMatrix =GLKMatrix4MakeOrtho(-1.0 * aspectRatio,
