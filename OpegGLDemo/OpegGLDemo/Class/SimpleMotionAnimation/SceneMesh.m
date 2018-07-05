@@ -130,8 +130,7 @@
 // drawing with the receiver's vertex attributes and indices.
 - (void)prepareToDraw;
 {
-   if(nil == self.vertexAttributeBuffer && 
-      0 < [self.vertexData length])
+   if(nil == self.vertexAttributeBuffer && 0 < [self.vertexData length])
    {  // vertex attiributes haven't been sent to GPU yet
        
        self.vertexAttributeBuffer = [[AGLKVertexAttribArrayBuffer alloc] initWithAttribStride:sizeof(SceneMeshVertex)
@@ -197,27 +196,21 @@
 }
 
 
-/////////////////////////////////////////////////////////////////
-// This method sends count sets of vertex attributes read from
-// someVerts to the GPU. This method also marks the resulting
-// vertex attribute array as a dynamic array prone to frequent
-// updates.
-- (void)makeDynamicAndUpdateWithVertices:
-   (const SceneMeshVertex *)someVerts
-   numberOfVertices:(size_t)count;
+//该方法向GPU发送从某些暗点读取的顶点属性的计数集。此方法还将生成的顶点属性数组标记为易于频繁更新的动态数组。
+- (void)makeDynamicAndUpdateWithVertices:(const SceneMeshVertex *)someVerts
+                        numberOfVertices:(size_t)count;
 {
    NSParameterAssert(NULL != someVerts);
    NSParameterAssert(0 < count);
    
    if(nil == self.vertexAttributeBuffer)
    {  // vertex attiributes haven't been sent to GPU yet
+       //顶点可能会频繁更新 GL_DYNAMIC_DRAW
       self.vertexAttributeBuffer = [[AGLKVertexAttribArrayBuffer alloc] initWithAttribStride:sizeof(SceneMeshVertex)
                                                                             numberOfVertices:count
                                                                                         data:someVerts
                                                                                        usage:GL_DYNAMIC_DRAW];
-   }
-   else
-   {
+   }else{
       [self.vertexAttributeBuffer reinitWithAttribStride:sizeof(SceneMeshVertex)
                                         numberOfVertices:count
                                                    bytes:someVerts];

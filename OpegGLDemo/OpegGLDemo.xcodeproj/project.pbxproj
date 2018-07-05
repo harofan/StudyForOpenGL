@@ -25,6 +25,9 @@
 		A613A33620EB5982006CCD0C /* SceneRinkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A613A33520EB5982006CCD0C /* SceneRinkModel.m */; };
 		A61416DC20AD24D300EADA0D /* BasicTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A61416DA20AD24D300EADA0D /* BasicTransformViewController.m */; };
 		A61416DD20AD24D300EADA0D /* BasicTransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61416DB20AD24D300EADA0D /* BasicTransformViewController.xib */; };
+		A622068220EDB13000201D76 /* AnimatedVertexFlagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A622068020EDB13000201D76 /* AnimatedVertexFlagViewController.m */; };
+		A622068320EDB13000201D76 /* AnimatedVertexFlagViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A622068120EDB13000201D76 /* AnimatedVertexFlagViewController.xib */; };
+		A622068920EDB78500201D76 /* SceneAnimatedMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = A622068720EDB78400201D76 /* SceneAnimatedMesh.m */; };
 		A62C310020ABD2C50050C7A6 /* Earth512x256.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A62C30FF20ABD2C50050C7A6 /* Earth512x256.jpg */; };
 		A65B311E20E9F3AB0090AD55 /* PerspectiveTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65B311C20E9F3AB0090AD55 /* PerspectiveTransformViewController.m */; };
 		A65B311F20E9F3AB0090AD55 /* PerspectiveTransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65B311D20E9F3AB0090AD55 /* PerspectiveTransformViewController.xib */; };
@@ -106,6 +109,11 @@
 		A61416DA20AD24D300EADA0D /* BasicTransformViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicTransformViewController.m; sourceTree = "<group>"; };
 		A61416DB20AD24D300EADA0D /* BasicTransformViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTransformViewController.xib; sourceTree = "<group>"; };
 		A61416DE20AD657300EADA0D /* lowPolyAxesAndModels2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lowPolyAxesAndModels2.h; sourceTree = "<group>"; };
+		A622067F20EDB13000201D76 /* AnimatedVertexFlagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedVertexFlagViewController.h; sourceTree = "<group>"; };
+		A622068020EDB13000201D76 /* AnimatedVertexFlagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedVertexFlagViewController.m; sourceTree = "<group>"; };
+		A622068120EDB13000201D76 /* AnimatedVertexFlagViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimatedVertexFlagViewController.xib; sourceTree = "<group>"; };
+		A622068720EDB78400201D76 /* SceneAnimatedMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneAnimatedMesh.m; sourceTree = "<group>"; };
+		A622068820EDB78400201D76 /* SceneAnimatedMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneAnimatedMesh.h; sourceTree = "<group>"; };
 		A62C30FF20ABD2C50050C7A6 /* Earth512x256.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Earth512x256.jpg; sourceTree = "<group>"; };
 		A65B311B20E9F3AB0090AD55 /* PerspectiveTransformViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerspectiveTransformViewController.h; sourceTree = "<group>"; };
 		A65B311C20E9F3AB0090AD55 /* PerspectiveTransformViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerspectiveTransformViewController.m; sourceTree = "<group>"; };
@@ -254,6 +262,18 @@
 			path = BasicTransform;
 			sourceTree = "<group>";
 		};
+		A622067E20EDB12300201D76 /* AnimatedVertexFlag */ = {
+			isa = PBXGroup;
+			children = (
+				A622068820EDB78400201D76 /* SceneAnimatedMesh.h */,
+				A622068720EDB78400201D76 /* SceneAnimatedMesh.m */,
+				A622067F20EDB13000201D76 /* AnimatedVertexFlagViewController.h */,
+				A622068020EDB13000201D76 /* AnimatedVertexFlagViewController.m */,
+				A622068120EDB13000201D76 /* AnimatedVertexFlagViewController.xib */,
+			);
+			path = AnimatedVertexFlag;
+			sourceTree = "<group>";
+		};
 		A65B311A20E9F38D0090AD55 /* PerspectiveTransform */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +358,7 @@
 		A6B425FF208717E100CC0035 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A622067E20EDB12300201D76 /* AnimatedVertexFlag */,
 				A613A32220EB45FC006CCD0C /* SimpleMotionAnimation */,
 				A65B311A20E9F38D0090AD55 /* PerspectiveTransform */,
 				A605CE5520AE8185001A0DF0 /* TextureTransform */,
@@ -552,6 +573,7 @@
 				A6B42635208F1D9B00CC0035 /* Shader.fsh in Resources */,
 				A605CE6620AEA540001A0DF0 /* AGLKPointParticleShader.fsh in Resources */,
 				A613A32720EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.xib in Resources */,
+				A622068320EDB13000201D76 /* AnimatedVertexFlagViewController.xib in Resources */,
 				A605CE6820AEA540001A0DF0 /* AGLKSkyboxShader.fsh in Resources */,
 				A6B2ED1120EB085800A21D14 /* Moon256x128.png in Resources */,
 				A65B311F20E9F3AB0090AD55 /* PerspectiveTransformViewController.xib in Resources */,
@@ -591,6 +613,7 @@
 				A6B4262E208EDBE300CC0035 /* MixedFragmentViewController.m in Sources */,
 				A6B42632208F0BA000CC0035 /* CustomTexturesViewController.m in Sources */,
 				A6B426032087230C00CC0035 /* SimpleTriangleViewController.m in Sources */,
+				A622068220EDB13000201D76 /* AnimatedVertexFlagViewController.m in Sources */,
 				A6B42624208DB0CC00CC0035 /* GLKEffectPropertyTexture+AGLKAdditions.m in Sources */,
 				A6B425D22085DE1000CC0035 /* ViewController.m in Sources */,
 				A6B4261E2089C96E00CC0035 /* AGLKTextureInfo.m in Sources */,
@@ -601,6 +624,7 @@
 				A6B42614208870C500CC0035 /* AEAGLContext.m in Sources */,
 				A6FBE4CE20A52DFD00083C31 /* SimpleLightViewController.m in Sources */,
 				A613A33620EB5982006CCD0C /* SceneRinkModel.m in Sources */,
+				A622068920EDB78500201D76 /* SceneAnimatedMesh.m in Sources */,
 				A6B425DD2085DE1100CC0035 /* main.m in Sources */,
 				A65B311E20E9F3AB0090AD55 /* PerspectiveTransformViewController.m in Sources */,
 				A605CE5920AE81B0001A0DF0 /* TextureTransformViewController.m in Sources */,

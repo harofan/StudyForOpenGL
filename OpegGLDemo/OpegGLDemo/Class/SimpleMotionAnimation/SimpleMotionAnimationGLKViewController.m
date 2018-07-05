@@ -151,6 +151,7 @@ static const int kSceneNumberOfPOVAnimationSeconds = 100.0;
     }else
     {
         //快速更新画面
+        //走这里的话画面就不是很流畅了
         self.eyePosition = SceneVector3FastLowPassFilter(self.timeSinceLastUpdate,
                                                          self.targetEyePosition,
                                                          self.eyePosition);
@@ -165,8 +166,6 @@ static const int kSceneNumberOfPOVAnimationSeconds = 100.0;
     
     // Update the target positions
     [self updatePointOfView];
-    
-    [self.glkView display];
 }
 
 #pragma mark - delegate

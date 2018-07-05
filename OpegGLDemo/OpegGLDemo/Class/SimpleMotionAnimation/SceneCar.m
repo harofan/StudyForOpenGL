@@ -89,11 +89,9 @@ radius;
                                            self.nextPosition.y, self.nextPosition.z);
         self.velocity = GLKVector3Make(-self.velocity.x,
                                        self.velocity.y, self.velocity.z);
-    }
-    else if((rinkBoundingBox.max.x - self.radius) < self.nextPosition.x)
+    }else if((rinkBoundingBox.max.x - self.radius) < self.nextPosition.x)
     {
-        self.nextPosition = GLKVector3Make(
-                                           (rinkBoundingBox.max.x - self.radius),
+        self.nextPosition = GLKVector3Make((rinkBoundingBox.max.x - self.radius),
                                            self.nextPosition.y, self.nextPosition.z);
         self.velocity = GLKVector3Make(-self.velocity.x,
                                        self.velocity.y, self.velocity.z);
@@ -106,8 +104,7 @@ radius;
                                            (rinkBoundingBox.min.z + self.radius));
         self.velocity = GLKVector3Make(self.velocity.x,
                                        self.velocity.y, -self.velocity.z);
-    }
-    else if((rinkBoundingBox.max.z - self.radius) < self.nextPosition.z)
+    }else if((rinkBoundingBox.max.z - self.radius) < self.nextPosition.z)
     {
         self.nextPosition = GLKVector3Make(self.nextPosition.x,
                                            self.nextPosition.y,
@@ -163,14 +160,11 @@ radius;
                                                              tanOtherVelocity);
                     
                     // Scale velocity based on elapsed time
-                    GLKVector3 travelDistance =
-                    GLKVector3MultiplyScalar(currentCar.velocity,
-                                             elapsedTimeSeconds);
+                    GLKVector3 travelDistance = GLKVector3MultiplyScalar(currentCar.velocity,
+                                                                         elapsedTimeSeconds);
                     
                     // Update position based on velocity and time since last
-                    // update
-                    currentCar.nextPosition = GLKVector3Add(
-                                                            currentCar.position,
+                    currentCar.nextPosition = GLKVector3Add(currentCar.position,
                                                             travelDistance);
                 }
             }
@@ -231,9 +225,7 @@ radius;
     if(0.0 > self.velocity.x)
     {  //二三象限,计算反余弦得出角度
         self.targetYawRadians = acosf(dotProduct);
-    }
-    else
-    {  //一四象限
+    }else{  //一四象限
         self.targetYawRadians = -acosf(dotProduct);
     }
     
@@ -337,8 +329,7 @@ GLKVector3 SceneVector3SlowLowPassFilter(
                                          GLKVector3 target,         // target value to approach
                                          GLKVector3 current)        // current value
 {  
-    return GLKVector3Make(
-                          SceneScalarSlowLowPassFilter(elapsed, target.x, current.x),
+    return GLKVector3Make(SceneScalarSlowLowPassFilter(elapsed, target.x, current.x),
                           SceneScalarSlowLowPassFilter(elapsed, target.y, current.y),
                           SceneScalarSlowLowPassFilter(elapsed, target.z, current.z));
 }
