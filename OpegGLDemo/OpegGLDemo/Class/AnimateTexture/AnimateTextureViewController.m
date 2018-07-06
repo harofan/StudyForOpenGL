@@ -141,17 +141,20 @@ static const GLKVector4 kLight2Position = {1.0f, 0.5f, 0.0f, 0.0f};
     // Tilt the spot lights using periodic functions for simple
     // smooth animation
     
-    static CGFloat refreshTime = 0;
-    refreshTime += 10 * 1/60.f;
+    static CGFloat lightRefreshTime = 0;
+    lightRefreshTime += 10 * 1/60.f;
     
-    _spotLight0TiltAboutXAngleDeg = -20.0f + 30.0f * sinf(refreshTime);
-    _spotLight0TiltAboutZAngleDeg = 30.0f * cosf(refreshTime);
-    _spotLight1TiltAboutXAngleDeg = 20.0f + 30.0f * cosf(refreshTime);
-    _spotLight1TiltAboutZAngleDeg = 30.0f * sinf(refreshTime);
+    _spotLight0TiltAboutXAngleDeg = -20.0f + 30.0f * sinf(lightRefreshTime);
+    _spotLight0TiltAboutZAngleDeg = 30.0f * cosf(lightRefreshTime);
+    _spotLight1TiltAboutXAngleDeg = 20.0f + 30.0f * cosf(lightRefreshTime);
+    _spotLight1TiltAboutZAngleDeg = 30.0f * sinf(lightRefreshTime);
 }
 
 - (void)updateTextureTransform
 {
+    static CGFloat textureRefreshTime = 0;
+    textureRefreshTime += 10 * 1/60.f;
+    
     //旋转纹理
     //转化纹理坐标系统的中心
     self.baseEffect.textureMatrix2d0 = GLKMatrix4MakeTranslation(0.5,
@@ -159,7 +162,7 @@ static const GLKVector4 kLight2Position = {1.0f, 0.5f, 0.0f, 0.0f};
                                                                  0.0);
     // Rotate
     self.baseEffect.textureMatrix2d0 = GLKMatrix4Rotate(self.baseEffect.textureMatrix2d0,
-                                                        -self.timeSinceLastResume, // use interval as radians
+                                                        -textureRefreshTime, // use interval as radians
                                                         0,
                                                         0,
                                                         1);
@@ -262,9 +265,9 @@ static const GLKVector4 kLight2Position = {1.0f, 0.5f, 0.0f, 0.0f};
     [self drawLight0];
     [self drawLight1];
     
-    static CGFloat refreshTime = 0;
-    refreshTime += 1/60.f;
-    [self.animatedMesh updateMeshWithElapsedTime:refreshTime];
+    static CGFloat glkRefreshTime = 0;
+    glkRefreshTime += 1/60.f;
+    [self.animatedMesh updateMeshWithElapsedTime:glkRefreshTime];
     self.baseEffect.texture2d0.enabled = GL_TRUE;
     self.baseEffect.texture2d1.enabled = GL_FALSE;
     
