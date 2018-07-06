@@ -130,54 +130,54 @@
 // drawing with the receiver's vertex attributes and indices.
 - (void)prepareToDraw;
 {
-   if(nil == self.vertexAttributeBuffer && 0 < [self.vertexData length])
-   {  // vertex attiributes haven't been sent to GPU yet
-       
-       self.vertexAttributeBuffer = [[AGLKVertexAttribArrayBuffer alloc] initWithAttribStride:sizeof(SceneMeshVertex)
-                                                                             numberOfVertices:[self.vertexData length]/sizeof(SceneMeshVertex)
-                                                                                         data:[self.vertexData bytes]
-                                                                                        usage:GL_STATIC_DRAW];
-
-      
-      // No longer need local data storage
-      self.vertexData = nil;
-   }
-   
-   if(0 == indexBufferID && 0 < [self.indexData length])
-   {  // Indices haven't been sent to GPU yet
-      // Create an element array buffer for mesh indices
-      glGenBuffers(1, &indexBufferID);
-      NSAssert(0 != self.indexBufferID, 
-         @"Failed to generate element array buffer");
-          
-      glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, self.indexBufferID);
-      glBufferData(GL_ELEMENT_ARRAY_BUFFER, 
-         [self.indexData length], 
-         [self.indexData bytes], 
-         GL_STATIC_DRAW);
-      
-      // No longer need local index storage
-      self.indexData = nil;
-   }
-   
-   // Prepare vertex buffer for drawing
-   [self.vertexAttributeBuffer prepareToDrawWithAttrib:GLKVertexAttribPosition
-                                    numberOfCordinates:3
-                                          attribOffset:offsetof(SceneMeshVertex, position)
-                                          shouldEnable:YES];
-      
-   [self.vertexAttributeBuffer prepareToDrawWithAttrib:GLKVertexAttribNormal
-                                    numberOfCordinates:3
-                                          attribOffset:offsetof(SceneMeshVertex, normal)
-                                          shouldEnable:YES];
-
-   [self.vertexAttributeBuffer prepareToDrawWithAttrib:GLKVertexAttribTexCoord0
-                                    numberOfCordinates:2
-                                          attribOffset:offsetof(SceneMeshVertex, texCoords0)
-                                          shouldEnable:YES];
-
-   // Bind the element array buffer (indices)
-   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferID);
+    if(nil == self.vertexAttributeBuffer && 0 < [self.vertexData length])
+    {  // vertex attiributes haven't been sent to GPU yet
+        
+        self.vertexAttributeBuffer = [[AGLKVertexAttribArrayBuffer alloc] initWithAttribStride:sizeof(SceneMeshVertex)
+                                                                              numberOfVertices:[self.vertexData length]/sizeof(SceneMeshVertex)
+                                                                                          data:[self.vertexData bytes]
+                                                                                         usage:GL_STATIC_DRAW];
+        
+        
+        // No longer need local data storage
+        self.vertexData = nil;
+    }
+    
+    if(0 == indexBufferID && 0 < [self.indexData length])
+    {  // Indices haven't been sent to GPU yet
+        // Create an element array buffer for mesh indices
+        glGenBuffers(1, &indexBufferID);
+        NSAssert(0 != self.indexBufferID,
+                 @"Failed to generate element array buffer");
+        
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, self.indexBufferID);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER,
+                     [self.indexData length],
+                     [self.indexData bytes],
+                     GL_STATIC_DRAW);
+        
+        // No longer need local index storage
+        self.indexData = nil;
+    }
+    
+    // Prepare vertex buffer for drawing
+    [self.vertexAttributeBuffer prepareToDrawWithAttrib:GLKVertexAttribPosition
+                                     numberOfCordinates:3
+                                           attribOffset:offsetof(SceneMeshVertex, position)
+                                           shouldEnable:YES];
+    
+    [self.vertexAttributeBuffer prepareToDrawWithAttrib:GLKVertexAttribNormal
+                                     numberOfCordinates:3
+                                           attribOffset:offsetof(SceneMeshVertex, normal)
+                                           shouldEnable:YES];
+    
+    [self.vertexAttributeBuffer prepareToDrawWithAttrib:GLKVertexAttribTexCoord0
+                                     numberOfCordinates:2
+                                           attribOffset:offsetof(SceneMeshVertex, texCoords0)
+                                           shouldEnable:YES];
+    
+    // Bind the element array buffer (indices)
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferID);
 }
 
 

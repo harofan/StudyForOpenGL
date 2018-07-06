@@ -90,31 +90,31 @@ static void SceneMeshUpdateMeshWithDefaultPositions(
 //该方法修改顶点位置并重新计算法线。在这个类的-draw方法中，顶点属性数组被修改后的顶点数据重新初始化。
 - (void)updateMeshWithElapsedTime:(NSTimeInterval)anInterval;
 {  
-   int    currentRow;
-   int    currentColumn;
-   
-   // For each position along +X axis of mesh
-   for(currentColumn = 0; currentColumn < NUM_MESH_COLUMNS; currentColumn++)
-   {
-      const GLfloat phaseOffset = 2.0f * anInterval;
-      const GLfloat phase = 4.0 * currentColumn / (float)NUM_MESH_COLUMNS;
-       
-       //改变y值,利用正弦函数来产生一个波动的效果
-      const GLfloat yOffset = 2.0 * sinf(M_PI * (phase + phaseOffset));
-   
-      // For each position along -Z axis of mesh
-      for(currentRow = 0; currentRow < NUM_MESH_ROWS; currentRow++)
-      {
-         mesh[currentColumn][currentRow].position.y = yOffset;
-      }
-   }  
-   
+    int    currentRow;
+    int    currentColumn;
+    
+    // For each position along +X axis of mesh
+    for(currentColumn = 0; currentColumn < NUM_MESH_COLUMNS; currentColumn++)
+    {
+        const GLfloat phaseOffset = 2.0f * anInterval;
+        const GLfloat phase = 4.0 * currentColumn / (float)NUM_MESH_COLUMNS;
+        
+        //改变y值,利用正弦函数来产生一个波动的效果
+        const GLfloat yOffset = 2.0 * sinf(M_PI * (phase + phaseOffset));
+        
+        // For each position along -Z axis of mesh
+        for(currentRow = 0; currentRow < NUM_MESH_ROWS; currentRow++)
+        {
+            mesh[currentColumn][currentRow].position.y = yOffset;
+        }
+    }  
+    
     //重新计算法向量
-   SceneMeshUpdateNormals(mesh);
-   
+    SceneMeshUpdateNormals(mesh);
+    
     //该方法向GPU发送从某些暗点读取的顶点属性的计数集。此方法还将生成的顶点属性数组标记为易于频繁更新的动态数组。
-   [self makeDynamicAndUpdateWithVertices:&mesh[0][0]
-                         numberOfVertices:sizeof(mesh) / sizeof(SceneMeshVertex)];
+    [self makeDynamicAndUpdateWithVertices:&mesh[0][0]
+                          numberOfVertices:sizeof(mesh) / sizeof(SceneMeshVertex)];
 }
 
 @end
