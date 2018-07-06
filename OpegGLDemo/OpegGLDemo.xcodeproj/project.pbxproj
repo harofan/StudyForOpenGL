@@ -35,6 +35,8 @@
 		A65B311F20E9F3AB0090AD55 /* PerspectiveTransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65B311D20E9F3AB0090AD55 /* PerspectiveTransformViewController.xib */; };
 		A668224A20AADE6A00BE07CE /* EarthSphereViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A668224820AADE6A00BE07CE /* EarthSphereViewController.m */; };
 		A668224B20AADE6A00BE07CE /* EarthSphereViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A668224920AADE6A00BE07CE /* EarthSphereViewController.xib */; };
+		A69AB42E20EF3CED00E13F8C /* AnimateTextureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A69AB42D20EF3CED00E13F8C /* AnimateTextureViewController.m */; };
+		A69AB43020EF430900E13F8C /* RadiusSelectionTool.png in Resources */ = {isa = PBXBuildFile; fileRef = A69AB42F20EF430900E13F8C /* RadiusSelectionTool.png */; };
 		A6B2ED1120EB085800A21D14 /* Moon256x128.png in Resources */ = {isa = PBXBuildFile; fileRef = A6B2ED1020EB085800A21D14 /* Moon256x128.png */; };
 		A6B425CF2085DE1000CC0035 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B425CE2085DE1000CC0035 /* AppDelegate.m */; };
 		A6B425D22085DE1000CC0035 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B425D12085DE1000CC0035 /* ViewController.m */; };
@@ -130,6 +132,9 @@
 		A668224720AADE6A00BE07CE /* EarthSphereViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EarthSphereViewController.h; sourceTree = "<group>"; };
 		A668224820AADE6A00BE07CE /* EarthSphereViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EarthSphereViewController.m; sourceTree = "<group>"; };
 		A668224920AADE6A00BE07CE /* EarthSphereViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EarthSphereViewController.xib; sourceTree = "<group>"; };
+		A69AB42C20EF3CED00E13F8C /* AnimateTextureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimateTextureViewController.h; sourceTree = "<group>"; };
+		A69AB42D20EF3CED00E13F8C /* AnimateTextureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimateTextureViewController.m; sourceTree = "<group>"; };
+		A69AB42F20EF430900E13F8C /* RadiusSelectionTool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RadiusSelectionTool.png; sourceTree = "<group>"; };
 		A6B2ED1020EB085800A21D14 /* Moon256x128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon256x128.png; sourceTree = "<group>"; };
 		A6B425CA2085DE1000CC0035 /* OpegGLDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpegGLDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B425CD2085DE1000CC0035 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -317,6 +322,16 @@
 			path = EarthSphere;
 			sourceTree = "<group>";
 		};
+		A69AB42B20EF3CE300E13F8C /* AnimateTexture */ = {
+			isa = PBXGroup;
+			children = (
+				A69AB42F20EF430900E13F8C /* RadiusSelectionTool.png */,
+				A69AB42C20EF3CED00E13F8C /* AnimateTextureViewController.h */,
+				A69AB42D20EF3CED00E13F8C /* AnimateTextureViewController.m */,
+			);
+			path = AnimateTexture;
+			sourceTree = "<group>";
+		};
 		A6B425C12085DE1000CC0035 = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +392,7 @@
 		A6B425FF208717E100CC0035 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A69AB42B20EF3CE300E13F8C /* AnimateTexture */,
 				A650A6C820EE00F700A89880 /* AnimateLight */,
 				A622067E20EDB12300201D76 /* AnimatedVertexFlag */,
 				A613A32220EB45FC006CCD0C /* SimpleMotionAnimation */,
@@ -591,6 +607,7 @@
 				A62C310020ABD2C50050C7A6 /* Earth512x256.jpg in Resources */,
 				A668224B20AADE6A00BE07CE /* EarthSphereViewController.xib in Resources */,
 				A6B42635208F1D9B00CC0035 /* Shader.fsh in Resources */,
+				A69AB43020EF430900E13F8C /* RadiusSelectionTool.png in Resources */,
 				A605CE6620AEA540001A0DF0 /* AGLKPointParticleShader.fsh in Resources */,
 				A613A32720EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.xib in Resources */,
 				A622068320EDB13000201D76 /* AnimatedVertexFlagViewController.xib in Resources */,
@@ -638,6 +655,7 @@
 				A6B425D22085DE1000CC0035 /* ViewController.m in Sources */,
 				A6B4261E2089C96E00CC0035 /* AGLKTextureInfo.m in Sources */,
 				A605CE5D20AE832A001A0DF0 /* AGLKTextureTransformBaseEffect.m in Sources */,
+				A69AB42E20EF3CED00E13F8C /* AnimateTextureViewController.m in Sources */,
 				A61416DC20AD24D300EADA0D /* BasicTransformViewController.m in Sources */,
 				A613A32620EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.m in Sources */,
 				A668224A20AADE6A00BE07CE /* EarthSphereViewController.m in Sources */,

@@ -1,12 +1,12 @@
 //
-//  AnimateLightViewController.m
+//  AnimateTextureViewController.m
 //  OpegGLDemo
 //
-//  Created by 范杨 on 2018/7/5.
+//  Created by 范杨 on 2018/7/6.
 //  Copyright © 2018年 RPGLiker. All rights reserved.
 //
 
-#import "AnimateLightViewController.h"
+#import "AnimateTextureViewController.h"
 #import "AGLKTextureTransformBaseEffect.h"
 #import "SceneAnimatedMesh.h"
 #import "SceneCanLightModel.h"
@@ -15,20 +15,18 @@ static const GLKVector4 kSpotLight0Position = {10.0f, 18.0f, -10.0f, 1.0f};
 static const GLKVector4 kSpotLight1Position = {30.0f, 18.0f, -10.0f, 1.0f};
 static const GLKVector4 kLight2Position = {1.0f, 0.5f, 0.0f, 0.0f};
 
-@interface AnimateLightViewController ()
-
-@property (strong, nonatomic) AGLKTextureTransformBaseEffect *baseEffect;
-@property (strong, nonatomic) SceneAnimatedMesh *animatedMesh;
-@property (strong, nonatomic) SceneCanLightModel *canLightModel;
-@property (nonatomic, assign) GLfloat spotLight0TiltAboutXAngleDeg;
-@property (nonatomic, assign) GLfloat spotLight0TiltAboutZAngleDeg;
-@property (nonatomic, assign) GLfloat spotLight1TiltAboutXAngleDeg;
-@property (nonatomic, assign) GLfloat spotLight1TiltAboutZAngleDeg;
+@interface AnimateTextureViewController ()<GLKViewDelegate>
+@property (strong, nonatomic)AGLKTextureTransformBaseEffect *baseEffect;
+@property (strong, nonatomic)SceneAnimatedMesh *animatedMesh;
+@property (strong, nonatomic)SceneCanLightModel *canLightModel;
+@property (nonatomic, assign)GLfloat spotLight0TiltAboutXAngleDeg;
+@property (nonatomic, assign)GLfloat spotLight0TiltAboutZAngleDeg;
+@property (nonatomic, assign)GLfloat spotLight1TiltAboutXAngleDeg;
+@property (nonatomic, assign)GLfloat spotLight1TiltAboutZAngleDeg;
 @property (strong, nonatomic) GLKView *glkView;
-
 @end
 
-@implementation AnimateLightViewController
+@implementation AnimateTextureViewController
 //支持旋转
 -(BOOL)shouldAutorotate{
     return YES;
@@ -48,9 +46,10 @@ static const GLKVector4 kLight2Position = {1.0f, 0.5f, 0.0f, 0.0f};
     // Do any additional setup after loading the view.
     
     GLKView *glkView = (GLKView *)self.view;
+    self.glkView = glkView;
     glkView.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     glkView.drawableDepthFormat = GLKViewDrawableDepthFormat16;
-    self.glkView = glkView;
+    glkView.delegate = self;
     [EAGLContext setCurrentContext:glkView.context];
     
     UIButton *closeBtn = [[UIButton alloc] initWithFrame:CGRectMake(120, 0, 100, 50)];
@@ -60,90 +59,29 @@ static const GLKVector4 kLight2Position = {1.0f, 0.5f, 0.0f, 0.0f};
     [self.view addSubview:closeBtn];
     
     self.baseEffect = [[AGLKTextureTransformBaseEffect alloc] init];
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     
-    //GLKLightingTypePerPixel高质量照明(对聚光灯很重要),使用GLKLightingTypePerVertex则会看到明显的锯齿
-    self.baseEffect.lightingType = GLKLightingTypePerPixel;
-    //baseEffect在同一时间只支持一种材质,所以这里的双面灯光关闭仅仅意味着背面不照亮
+    _animatedMesh = [[SceneAnimatedMesh alloc] init];
+    self.baseEffect.transform.modelviewMatrix = GLKMatrix4MakeLookAt(20, 25, 5,
+                                                                     20, 0, -15,
+                                                                     0, 1, 0);
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+    
+    self.canLightModel = [[SceneCanLightModel alloc] init];
+    
+    self.baseEffect.material.ambientColor = GLKVector4Make(0.1f, 0.1f, 0.1f, 1.0f);
+    self.baseEffect.lightModelAmbientColor = GLKVector4Make(0.1f, 0.1f, 0.1f, 1.0f);
+    
+    //light0
+    self.baseEffect.lightingType = GLKLightingTypePerVertex;
     self.baseEffect.lightModelTwoSided = GL_FALSE;
     self.baseEffect.lightModelAmbientColor = GLKVector4Make(0.6f, // Red
                                                             0.6f, // Green
                                                             0.6f, // Blue
                                                             1.0f);// Alpha
-    
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-    
-    _animatedMesh = [[SceneAnimatedMesh alloc] init];
-    
-    self.baseEffect.transform.modelviewMatrix = GLKMatrix4MakeLookAt(20, 25, 5,
-                                                                     20, 0, -15,
-                                                                     0, 1, 0);
-    glEnable(GL_DEPTH_TEST);
-    
-    //为聚光灯加载模型
-    self.canLightModel = [[SceneCanLightModel alloc] init];
-    
-    //环境光
-    self.baseEffect.material.ambientColor = GLKVector4Make(0.4f, 0.4f, 0.4f, 1.0f);
-    self.baseEffect.lightModelAmbientColor = GLKVector4Make(0.4f, 0.4f, 0.4f, 1.0f);
-    
-    //light0 聚光灯
-    [self configLight0];
-    
-    //light1 聚光灯
-    [self configLight1];
-    
-    //light2 方向光
-    [self configLight2];
-    
-    //材料颜色
-    self.baseEffect.material.diffuseColor = GLKVector4Make(1.0f, // Red
-                                                           1.0f, // Green
-                                                           1.0f, // Blue
-                                                           1.0f);// Alpha
-    self.baseEffect.material.specularColor = GLKVector4Make(0.0f, // Red
-                                                            0.0f, // Green
-                                                            0.0f, // Blue
-                                                            1.0f);// Alpha
-}
-
-- (void)dealloc{
-    [EAGLContext setCurrentContext:self.glkView.context];
-    
-    // Stop using the context created in -viewDidLoad
-    self.glkView.context = nil;
-    [EAGLContext setCurrentContext:nil];
-    
-    _animatedMesh = nil;
-    _canLightModel = nil;
-}
-
-- (void)dismiss{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-#pragma mark - update
-- (void)updateSpotLightDirections
-{
-    static CGFloat refreshTime = 0;
-    refreshTime += 10 * 1/60.f;
-    
-    //使用周期函数倾斜聚光灯进行简单的平滑动画(常量是任意的，为视觉上有趣的聚光灯方向选择)
-    _spotLight0TiltAboutXAngleDeg = -20.0f + 30.0f * sinf(refreshTime);
-    _spotLight0TiltAboutZAngleDeg = 30.0f * cosf(refreshTime);
-    _spotLight1TiltAboutXAngleDeg = 20.0f + 30.0f * cosf(refreshTime);
-    _spotLight1TiltAboutZAngleDeg = 30.0f * sinf(refreshTime);
-}
-
-- (void)update
-{
-    [self updateSpotLightDirections];
-}
-
-#pragma mark - config light
-- (void)configLight0{
     self.baseEffect.light0.enabled = GL_TRUE;
-    //灯光从中心到边缘变暗的速度
     self.baseEffect.light0.spotExponent = 20.0f;
-    //用度计量的角度.这个角度决定了灯光圆锥体的宽度
     self.baseEffect.light0.spotCutoff = 30.0f;
     self.baseEffect.light0.diffuseColor = GLKVector4Make(1.0f, // Red
                                                          1.0f, // Green
@@ -153,9 +91,8 @@ static const GLKVector4 kLight2Position = {1.0f, 0.5f, 0.0f, 0.0f};
                                                           0.0f, // Green
                                                           0.0f, // Blue
                                                           1.0f);// Alpha
-}
 
-- (void)configLight1{
+    //light1
     self.baseEffect.light1.enabled = GL_TRUE;
     self.baseEffect.light1.spotExponent = 20.0f;
     self.baseEffect.light1.spotCutoff = 30.0f;
@@ -167,18 +104,77 @@ static const GLKVector4 kLight2Position = {1.0f, 0.5f, 0.0f, 0.0f};
                                                           0.0f, // Green
                                                           0.0f, // Blue
                                                           1.0f);// Alpha
-}
-
-- (void)configLight2{
+    
     self.baseEffect.light2.enabled = GL_TRUE;
     self.baseEffect.light2Position = kLight2Position;
-    self.baseEffect.light2.diffuseColor = GLKVector4Make(0.5f, // Red
+    self.baseEffect.light2.diffuseColor = GLKVector4Make(
+                                                         0.5f, // Red
                                                          0.5f, // Green
                                                          0.5f, // Blue
                                                          1.0f);// Alpha
+    
+    // 材料颜色
+    self.baseEffect.material.diffuseColor = GLKVector4Make(1.0f, // Red
+                                                           1.0f, // Green
+                                                           1.0f, // Blue
+                                                           1.0f);// Alpha
+    self.baseEffect.material.specularColor = GLKVector4Make(0.0f, // Red
+                                                            0.0f, // Green
+                                                            0.0f, // Blue
+                                                            1.0f);// Alpha
+    
+    //设置纹理
+    CGImageRef imageRef0 = [[UIImage imageNamed:@"RadiusSelectionTool.png"] CGImage];
+    GLKTextureInfo *textureInfo0 = [GLKTextureLoader textureWithCGImage:imageRef0
+                                                                options:nil
+                                                                  error:NULL];
+    self.baseEffect.texture2d0.name = textureInfo0.name;
+    self.baseEffect.texture2d0.target = textureInfo0.target;
 }
 
-#pragma mark - draw
+- (void)dismiss{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)updateSpotLightDirections
+{
+    // Tilt the spot lights using periodic functions for simple
+    // smooth animation
+    
+    static CGFloat refreshTime = 0;
+    refreshTime += 10 * 1/60.f;
+    
+    _spotLight0TiltAboutXAngleDeg = -20.0f + 30.0f * sinf(refreshTime);
+    _spotLight0TiltAboutZAngleDeg = 30.0f * cosf(refreshTime);
+    _spotLight1TiltAboutXAngleDeg = 20.0f + 30.0f * cosf(refreshTime);
+    _spotLight1TiltAboutZAngleDeg = 30.0f * sinf(refreshTime);
+}
+
+- (void)updateTextureTransform
+{
+    //旋转纹理
+    //转化纹理坐标系统的中心
+    self.baseEffect.textureMatrix2d0 = GLKMatrix4MakeTranslation(0.5,
+                                                                 0.5,
+                                                                 0.0);
+    // Rotate
+    self.baseEffect.textureMatrix2d0 = GLKMatrix4Rotate(self.baseEffect.textureMatrix2d0,
+                                                        -self.timeSinceLastResume, // use interval as radians
+                                                        0,
+                                                        0,
+                                                        1);
+    //回到原点
+    self.baseEffect.textureMatrix2d0 = GLKMatrix4Translate(self.baseEffect.textureMatrix2d0,
+                                                           -0.5,
+                                                           -0.5,
+                                                           0);
+}
+
+- (void)update
+{
+    [self updateSpotLightDirections];
+    [self updateTextureTransform];
+}
 
 - (void)drawLight0
 {
@@ -190,26 +186,27 @@ static const GLKVector4 kLight2Position = {1.0f, 0.5f, 0.0f, 0.0f};
                                                                     kSpotLight0Position.x,
                                                                     kSpotLight0Position.y,
                                                                     kSpotLight0Position.z);
-    self.baseEffect.transform.modelviewMatrix =GLKMatrix4Rotate(self.baseEffect.transform.modelviewMatrix,
-                                                                GLKMathDegreesToRadians(self.spotLight0TiltAboutXAngleDeg),
-                                                                1,
-                                                                0,
-                                                                0);
-    self.baseEffect.transform.modelviewMatrix =GLKMatrix4Rotate(self.baseEffect.transform.modelviewMatrix,
-                                                                GLKMathDegreesToRadians(self.spotLight0TiltAboutZAngleDeg),
-                                                                0,
-                                                                0,
-                                                                1);
+    self.baseEffect.transform.modelviewMatrix = GLKMatrix4Rotate(self.baseEffect.transform.modelviewMatrix,
+                                                                 GLKMathDegreesToRadians(self.spotLight0TiltAboutXAngleDeg),
+                                                                 1,
+                                                                 0,
+                                                                 0);
+    self.baseEffect.transform.modelviewMatrix = GLKMatrix4Rotate(self.baseEffect.transform.modelviewMatrix,
+                                                                 GLKMathDegreesToRadians(self.spotLight0TiltAboutZAngleDeg),
+                                                                 0,
+                                                                 0,
+                                                                 1);
     
-    // 配置灯光坐标
+    // Configure light in current coordinate system
     self.baseEffect.light0Position = GLKVector4Make(0, 0, 0, 1);
-    //定义圆锥体内光线照射方向的矢量
     self.baseEffect.light0SpotDirection = GLKVector3Make(0, -1, 0);
+    self.baseEffect.texture2d0.enabled = GL_FALSE;
+    self.baseEffect.texture2d1.enabled = GL_FALSE;
     
-    [self.baseEffect prepareToDraw];
+    [self.baseEffect prepareToDrawMultitextures];
     [self.canLightModel draw];
     
-    // 恢复保存的矩阵
+    // Restore saved attributes
     self.baseEffect.transform.modelviewMatrix = savedModelviewMatrix;
 }
 
@@ -237,8 +234,10 @@ static const GLKVector4 kLight2Position = {1.0f, 0.5f, 0.0f, 0.0f};
     // Configure light in current coordinate system
     self.baseEffect.light1Position = GLKVector4Make(0, 0, 0, 1);
     self.baseEffect.light1SpotDirection = GLKVector3Make(0, -1, 0);
+    self.baseEffect.texture2d0.enabled = GL_FALSE;
+    self.baseEffect.texture2d1.enabled = GL_FALSE;
     
-    [self.baseEffect prepareToDraw];
+    [self.baseEffect prepareToDrawMultitextures];
     [self.canLightModel draw];
     
     // Restore saved attributes
@@ -247,6 +246,7 @@ static const GLKVector4 kLight2Position = {1.0f, 0.5f, 0.0f, 0.0f};
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
 {
+    
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
     
     // Calculate the aspect ratio for the scene and setup a
@@ -265,12 +265,24 @@ static const GLKVector4 kLight2Position = {1.0f, 0.5f, 0.0f, 0.0f};
     static CGFloat refreshTime = 0;
     refreshTime += 1/60.f;
     [self.animatedMesh updateMeshWithElapsedTime:refreshTime];
+    self.baseEffect.texture2d0.enabled = GL_TRUE;
+    self.baseEffect.texture2d1.enabled = GL_FALSE;
     
     // Draw the mesh
-    [self.baseEffect prepareToDraw];
+    [self.baseEffect prepareToDrawMultitextures];
     [self.animatedMesh prepareToDraw];
     [self.animatedMesh drawEntireMesh];
 }
 
+- (void)dealloc{
+    [EAGLContext setCurrentContext:self.glkView.context];
+    
+    // Stop using the context created in -viewDidLoad
+    self.glkView.context = nil;
+    [EAGLContext setCurrentContext:nil];
+    
+    _animatedMesh = nil;
+    _canLightModel = nil;
+}
 
 @end
