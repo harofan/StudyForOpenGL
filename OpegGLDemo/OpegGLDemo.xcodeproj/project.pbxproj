@@ -29,6 +29,8 @@
 		A622068320EDB13000201D76 /* AnimatedVertexFlagViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A622068120EDB13000201D76 /* AnimatedVertexFlagViewController.xib */; };
 		A622068920EDB78500201D76 /* SceneAnimatedMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = A622068720EDB78400201D76 /* SceneAnimatedMesh.m */; };
 		A62C310020ABD2C50050C7A6 /* Earth512x256.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A62C30FF20ABD2C50050C7A6 /* Earth512x256.jpg */; };
+		A644903720EF5A3300844A72 /* AnimateTextureAtlasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A644903620EF5A3300844A72 /* AnimateTextureAtlasViewController.m */; };
+		A644903920EF688700844A72 /* RabbitTextureAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = A644903820EF688700844A72 /* RabbitTextureAtlas.png */; };
 		A650A6CB20EE01C300A89880 /* AnimateLightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A650A6CA20EE01C300A89880 /* AnimateLightViewController.m */; };
 		A650A6CE20EE038700A89880 /* SceneCanLightModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A650A6CD20EE038700A89880 /* SceneCanLightModel.m */; };
 		A65B311E20E9F3AB0090AD55 /* PerspectiveTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65B311C20E9F3AB0090AD55 /* PerspectiveTransformViewController.m */; };
@@ -119,6 +121,9 @@
 		A622068720EDB78400201D76 /* SceneAnimatedMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneAnimatedMesh.m; sourceTree = "<group>"; };
 		A622068820EDB78400201D76 /* SceneAnimatedMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneAnimatedMesh.h; sourceTree = "<group>"; };
 		A62C30FF20ABD2C50050C7A6 /* Earth512x256.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Earth512x256.jpg; sourceTree = "<group>"; };
+		A644903520EF5A3300844A72 /* AnimateTextureAtlasViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimateTextureAtlasViewController.h; sourceTree = "<group>"; };
+		A644903620EF5A3300844A72 /* AnimateTextureAtlasViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimateTextureAtlasViewController.m; sourceTree = "<group>"; };
+		A644903820EF688700844A72 /* RabbitTextureAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RabbitTextureAtlas.png; sourceTree = "<group>"; };
 		A650A6C920EE01C300A89880 /* AnimateLightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimateLightViewController.h; sourceTree = "<group>"; };
 		A650A6CA20EE01C300A89880 /* AnimateLightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimateLightViewController.m; sourceTree = "<group>"; };
 		A650A6CC20EE037E00A89880 /* SceneCanLightModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneCanLightModel.h; sourceTree = "<group>"; };
@@ -286,6 +291,16 @@
 			path = AnimatedVertexFlag;
 			sourceTree = "<group>";
 		};
+		A644903420EF5A2000844A72 /* AnimateTextureAtlas */ = {
+			isa = PBXGroup;
+			children = (
+				A644903820EF688700844A72 /* RabbitTextureAtlas.png */,
+				A644903520EF5A3300844A72 /* AnimateTextureAtlasViewController.h */,
+				A644903620EF5A3300844A72 /* AnimateTextureAtlasViewController.m */,
+			);
+			path = AnimateTextureAtlas;
+			sourceTree = "<group>";
+		};
 		A650A6C820EE00F700A89880 /* AnimateLight */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +407,7 @@
 		A6B425FF208717E100CC0035 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A644903420EF5A2000844A72 /* AnimateTextureAtlas */,
 				A69AB42B20EF3CE300E13F8C /* AnimateTexture */,
 				A650A6C820EE00F700A89880 /* AnimateLight */,
 				A622067E20EDB12300201D76 /* AnimatedVertexFlag */,
@@ -615,6 +631,7 @@
 				A6B2ED1120EB085800A21D14 /* Moon256x128.png in Resources */,
 				A65B311F20E9F3AB0090AD55 /* PerspectiveTransformViewController.xib in Resources */,
 				A6FBE4CF20A52DFD00083C31 /* SimpleLightViewController.xib in Resources */,
+				A644903920EF688700844A72 /* RabbitTextureAtlas.png in Resources */,
 				A6B425DA2085DE1100CC0035 /* LaunchScreen.storyboard in Resources */,
 				A605CE6B20AEA540001A0DF0 /* AGLKSkyboxShader.vsh in Resources */,
 				A6B425D72085DE1100CC0035 /* Assets.xcassets in Resources */,
@@ -659,6 +676,7 @@
 				A61416DC20AD24D300EADA0D /* BasicTransformViewController.m in Sources */,
 				A613A32620EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.m in Sources */,
 				A668224A20AADE6A00BE07CE /* EarthSphereViewController.m in Sources */,
+				A644903720EF5A3300844A72 /* AnimateTextureAtlasViewController.m in Sources */,
 				A6B42614208870C500CC0035 /* AEAGLContext.m in Sources */,
 				A6FBE4CE20A52DFD00083C31 /* SimpleLightViewController.m in Sources */,
 				A613A33620EB5982006CCD0C /* SceneRinkModel.m in Sources */,
