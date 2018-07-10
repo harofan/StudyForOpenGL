@@ -24,6 +24,7 @@
 @property (assign, nonatomic) float joint0AngleRadians;
 @property (assign, nonatomic) float joint1AngleRadians;
 @property (assign, nonatomic) float joint2AngleRadians;
+@property (strong, nonatomic) GLKView *glkView;
 
 @end
 
@@ -36,6 +37,7 @@
     [self init3Slider];
     
     GLKView *glkView = (GLKView *)self.view;
+    self.glkView = glkView;
     glkView.drawableDepthFormat = GLKViewDrawableDepthFormat24;
     glkView.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     [EAGLContext setCurrentContext:glkView.context];
@@ -105,6 +107,15 @@
     [self setJoint0AngleRadians:0];
     [self setJoint1AngleRadians:0];
     [self setJoint2AngleRadians:0];
+}
+
+- (void)dealloc{
+    self.glkView.context = nil;
+    [EAGLContext setCurrentContext:nil];
+    self.baseEffect = nil;
+    self.bone0 = nil;
+    self.bone1 = nil;
+    self.bone2 = nil;
 }
 
 #pragma mark - delegate
