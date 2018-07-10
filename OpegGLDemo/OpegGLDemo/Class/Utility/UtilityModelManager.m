@@ -96,7 +96,7 @@
 /////////////////////////////////////////////////////////////////
 // This method initializes the texture, mesh, and models loaded
 // from a plist archived in data.
-- (BOOL)readFromData:(NSData *)data 
+- (BOOL)readFromData:(NSData *)data
               ofType:(NSString *)typeName
                error:(NSError **)outError
 {

@@ -15,8 +15,7 @@
 // been prepared for drawing.
 - (void)draw
 {
-   [self.mesh drawCommandsInRange:NSMakeRange(
-      indexOfFirstCommand_, numberOfCommands_)];
+   [self.mesh drawCommandsInRange:NSMakeRange(indexOfFirstCommand_, numberOfCommands_)];
 }
 
 @end

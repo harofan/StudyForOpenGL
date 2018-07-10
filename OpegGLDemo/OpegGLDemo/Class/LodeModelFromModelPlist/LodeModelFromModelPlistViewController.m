@@ -161,6 +161,7 @@
     
     // Cull back faces: Important! many Sketchup models have back
     // faces that cause Z fighting if back faces are not culled.
+    //背面剔除,不剔除会产生双面造成z方向冲突
     glEnable(GL_CULL_FACE);
     
     // Calculate the aspect ratio for the scene and setup a

@@ -24,6 +24,7 @@
 #import "AnimateTextureViewController.h"
 #import "AnimateTextureAtlasViewController.h"
 #import "LodeModelFromModelPlistViewController.h"
+#import "SkeletalAnimationViewController.h"
 
 #define ScreenWidth         [[UIScreen mainScreen] bounds].size.width
 #define ScreenHeight        [[UIScreen mainScreen] bounds].size.height
@@ -175,6 +176,12 @@
         }
             break;
             
+        case 17:{
+            SkeletalAnimationViewController *vc = [SkeletalAnimationViewController new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
         default:
             break;
     }
@@ -198,7 +205,7 @@
 #pragma mark - set && get
 - (NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@"简单三角形的渲染", @"自定义一个glview", @"渲染一个简单的纹理", @"混合片元", @"多重纹理", @"自定义纹理", @"简单灯光", @"地球渲染", @"基本变换", @"纹理的变换", @"透明变换", @"简单场景内移动动画", @"动画化顶点数据(旗子动画)", @"动画化灯光效果(舞台聚光灯)", @"动画纹理", @"动画化纹理贴图集", @"从modelPlist中加载模型"];
+        _dataArray = @[@"简单三角形的渲染", @"自定义一个glview", @"渲染一个简单的纹理", @"混合片元", @"多重纹理", @"自定义纹理", @"简单灯光", @"地球渲染", @"基本变换", @"纹理的变换", @"透明变换", @"简单场景内移动动画", @"动画化顶点数据(旗子动画)", @"动画化灯光效果(舞台聚光灯)", @"动画纹理", @"动画化纹理贴图集", @"从modelPlist中加载模型", @"骨骼动画"];
     }
     return _dataArray;
 }

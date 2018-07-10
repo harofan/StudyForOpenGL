@@ -25,10 +25,20 @@
 		A613A33620EB5982006CCD0C /* SceneRinkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A613A33520EB5982006CCD0C /* SceneRinkModel.m */; };
 		A61416DC20AD24D300EADA0D /* BasicTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A61416DA20AD24D300EADA0D /* BasicTransformViewController.m */; };
 		A61416DD20AD24D300EADA0D /* BasicTransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61416DB20AD24D300EADA0D /* BasicTransformViewController.xib */; };
+		A617312920F3630700C42C7E /* SkeletalAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A617312720F3630700C42C7E /* SkeletalAnimationViewController.m */; };
+		A617312A20F3630700C42C7E /* SkeletalAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A617312820F3630700C42C7E /* SkeletalAnimationViewController.xib */; };
 		A622068220EDB13000201D76 /* AnimatedVertexFlagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A622068020EDB13000201D76 /* AnimatedVertexFlagViewController.m */; };
 		A622068320EDB13000201D76 /* AnimatedVertexFlagViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A622068120EDB13000201D76 /* AnimatedVertexFlagViewController.xib */; };
 		A622068920EDB78500201D76 /* SceneAnimatedMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = A622068720EDB78400201D76 /* SceneAnimatedMesh.m */; };
 		A62C310020ABD2C50050C7A6 /* Earth512x256.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A62C30FF20ABD2C50050C7A6 /* Earth512x256.jpg */; };
+		A641E83320F4436C00668862 /* UtilityModel+skinning.m in Sources */ = {isa = PBXBuildFile; fileRef = A641E83220F4436C00668862 /* UtilityModel+skinning.m */; };
+		A641E83620F4438400668862 /* UtilityModelManager+skinning.m in Sources */ = {isa = PBXBuildFile; fileRef = A641E83520F4438400668862 /* UtilityModelManager+skinning.m */; };
+		A641E83920F443A600668862 /* UtilityMesh+skinning.m in Sources */ = {isa = PBXBuildFile; fileRef = A641E83820F443A600668862 /* UtilityMesh+skinning.m */; };
+		A641E83C20F443B400668862 /* UtilityJoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A641E83B20F443B400668862 /* UtilityJoint.m */; };
+		A641E83F20F443CC00668862 /* UtilityArmatureBaseEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = A641E83E20F443CC00668862 /* UtilityArmatureBaseEffect.m */; };
+		A641E84120F446FC00668862 /* armature.modelplist in Resources */ = {isa = PBXBuildFile; fileRef = A641E84020F446FC00668862 /* armature.modelplist */; };
+		A641E84320F447BF00668862 /* UtilityArmaturePointLightShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = A641E84220F447BF00668862 /* UtilityArmaturePointLightShader.vsh */; };
+		A641E84520F4483200668862 /* UtilityArmaturePointLightShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A641E84420F4483200668862 /* UtilityArmaturePointLightShader.fsh */; };
 		A644903720EF5A3300844A72 /* AnimateTextureAtlasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A644903620EF5A3300844A72 /* AnimateTextureAtlasViewController.m */; };
 		A644903920EF688700844A72 /* RabbitTextureAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = A644903820EF688700844A72 /* RabbitTextureAtlas.png */; };
 		A650A6CB20EE01C300A89880 /* AnimateLightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A650A6CA20EE01C300A89880 /* AnimateLightViewController.m */; };
@@ -127,12 +137,28 @@
 		A61416DA20AD24D300EADA0D /* BasicTransformViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicTransformViewController.m; sourceTree = "<group>"; };
 		A61416DB20AD24D300EADA0D /* BasicTransformViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTransformViewController.xib; sourceTree = "<group>"; };
 		A61416DE20AD657300EADA0D /* lowPolyAxesAndModels2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lowPolyAxesAndModels2.h; sourceTree = "<group>"; };
+		A617312620F3630700C42C7E /* SkeletalAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkeletalAnimationViewController.h; sourceTree = "<group>"; };
+		A617312720F3630700C42C7E /* SkeletalAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkeletalAnimationViewController.m; sourceTree = "<group>"; };
+		A617312820F3630700C42C7E /* SkeletalAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkeletalAnimationViewController.xib; sourceTree = "<group>"; };
 		A622067F20EDB13000201D76 /* AnimatedVertexFlagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedVertexFlagViewController.h; sourceTree = "<group>"; };
 		A622068020EDB13000201D76 /* AnimatedVertexFlagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedVertexFlagViewController.m; sourceTree = "<group>"; };
 		A622068120EDB13000201D76 /* AnimatedVertexFlagViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimatedVertexFlagViewController.xib; sourceTree = "<group>"; };
 		A622068720EDB78400201D76 /* SceneAnimatedMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneAnimatedMesh.m; sourceTree = "<group>"; };
 		A622068820EDB78400201D76 /* SceneAnimatedMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneAnimatedMesh.h; sourceTree = "<group>"; };
 		A62C30FF20ABD2C50050C7A6 /* Earth512x256.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Earth512x256.jpg; sourceTree = "<group>"; };
+		A641E83120F4436C00668862 /* UtilityModel+skinning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UtilityModel+skinning.h"; sourceTree = "<group>"; };
+		A641E83220F4436C00668862 /* UtilityModel+skinning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UtilityModel+skinning.m"; sourceTree = "<group>"; };
+		A641E83420F4438300668862 /* UtilityModelManager+skinning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UtilityModelManager+skinning.h"; sourceTree = "<group>"; };
+		A641E83520F4438400668862 /* UtilityModelManager+skinning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UtilityModelManager+skinning.m"; sourceTree = "<group>"; };
+		A641E83720F443A600668862 /* UtilityMesh+skinning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UtilityMesh+skinning.h"; sourceTree = "<group>"; };
+		A641E83820F443A600668862 /* UtilityMesh+skinning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UtilityMesh+skinning.m"; sourceTree = "<group>"; };
+		A641E83A20F443B300668862 /* UtilityJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityJoint.h; sourceTree = "<group>"; };
+		A641E83B20F443B400668862 /* UtilityJoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilityJoint.m; sourceTree = "<group>"; };
+		A641E83D20F443CC00668862 /* UtilityArmatureBaseEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityArmatureBaseEffect.h; sourceTree = "<group>"; };
+		A641E83E20F443CC00668862 /* UtilityArmatureBaseEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilityArmatureBaseEffect.m; sourceTree = "<group>"; };
+		A641E84020F446FC00668862 /* armature.modelplist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = armature.modelplist; sourceTree = "<group>"; };
+		A641E84220F447BF00668862 /* UtilityArmaturePointLightShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = UtilityArmaturePointLightShader.vsh; sourceTree = "<group>"; };
+		A641E84420F4483200668862 /* UtilityArmaturePointLightShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = UtilityArmaturePointLightShader.fsh; sourceTree = "<group>"; };
 		A644903520EF5A3300844A72 /* AnimateTextureAtlasViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimateTextureAtlasViewController.h; sourceTree = "<group>"; };
 		A644903620EF5A3300844A72 /* AnimateTextureAtlasViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimateTextureAtlasViewController.m; sourceTree = "<group>"; };
 		A644903820EF688700844A72 /* RabbitTextureAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RabbitTextureAtlas.png; sourceTree = "<group>"; };
@@ -278,6 +304,8 @@
 				A605CE6320AEA540001A0DF0 /* AGLKPointParticleShader.vsh */,
 				A605CE6420AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.fsh */,
 				A605CE6520AEA540001A0DF0 /* AGLKSkyboxShader.vsh */,
+				A641E84220F447BF00668862 /* UtilityArmaturePointLightShader.vsh */,
+				A641E84420F4483200668862 /* UtilityArmaturePointLightShader.fsh */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -313,6 +341,17 @@
 				A61416DB20AD24D300EADA0D /* BasicTransformViewController.xib */,
 			);
 			path = BasicTransform;
+			sourceTree = "<group>";
+		};
+		A617312220F3623F00C42C7E /* SkeletalAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				A641E84020F446FC00668862 /* armature.modelplist */,
+				A617312620F3630700C42C7E /* SkeletalAnimationViewController.h */,
+				A617312720F3630700C42C7E /* SkeletalAnimationViewController.m */,
+				A617312820F3630700C42C7E /* SkeletalAnimationViewController.xib */,
+			);
+			path = SkeletalAnimation;
 			sourceTree = "<group>";
 		};
 		A622067E20EDB12300201D76 /* AnimatedVertexFlag */ = {
@@ -388,6 +427,16 @@
 		A681D8E820F3396C00CA40C0 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				A641E83D20F443CC00668862 /* UtilityArmatureBaseEffect.h */,
+				A641E83E20F443CC00668862 /* UtilityArmatureBaseEffect.m */,
+				A641E83A20F443B300668862 /* UtilityJoint.h */,
+				A641E83B20F443B400668862 /* UtilityJoint.m */,
+				A641E83720F443A600668862 /* UtilityMesh+skinning.h */,
+				A641E83820F443A600668862 /* UtilityMesh+skinning.m */,
+				A641E83420F4438300668862 /* UtilityModelManager+skinning.h */,
+				A641E83520F4438400668862 /* UtilityModelManager+skinning.m */,
+				A641E83120F4436C00668862 /* UtilityModel+skinning.h */,
+				A641E83220F4436C00668862 /* UtilityModel+skinning.m */,
 				A681D90220F33A0800CA40C0 /* UtilityEffect.h */,
 				A681D90120F33A0700CA40C0 /* UtilityEffect.m */,
 				A681D8FE20F339D400CA40C0 /* UtilityModelEffect.h */,
@@ -480,6 +529,7 @@
 		A6B425FF208717E100CC0035 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A617312220F3623F00C42C7E /* SkeletalAnimation */,
 				A681D8E820F3396C00CA40C0 /* Utility */,
 				A681D8E420F337F000CA40C0 /* LodeModelFromModelPlist */,
 				A644903420EF5A2000844A72 /* AnimateTextureAtlas */,
@@ -694,6 +744,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A617312A20F3630700C42C7E /* SkeletalAnimationViewController.xib in Resources */,
 				A61416DD20AD24D300EADA0D /* BasicTransformViewController.xib in Resources */,
 				A605CE6720AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.vsh in Resources */,
 				A62C310020ABD2C50050C7A6 /* Earth512x256.jpg in Resources */,
@@ -709,8 +760,11 @@
 				A6FBE4CF20A52DFD00083C31 /* SimpleLightViewController.xib in Resources */,
 				A644903920EF688700844A72 /* RabbitTextureAtlas.png in Resources */,
 				A6B425DA2085DE1100CC0035 /* LaunchScreen.storyboard in Resources */,
+				A641E84320F447BF00668862 /* UtilityArmaturePointLightShader.vsh in Resources */,
+				A641E84120F446FC00668862 /* armature.modelplist in Resources */,
 				A605CE6B20AEA540001A0DF0 /* AGLKSkyboxShader.vsh in Resources */,
 				A681D90A20F34F2B00CA40C0 /* bumper.modelplist in Resources */,
+				A641E84520F4483200668862 /* UtilityArmaturePointLightShader.fsh in Resources */,
 				A6B425D72085DE1100CC0035 /* Assets.xcassets in Resources */,
 				A605CE6920AEA540001A0DF0 /* AGLKPointParticleShader.vsh in Resources */,
 				A605CE6A20AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.fsh in Resources */,
@@ -755,10 +809,13 @@
 				A61416DC20AD24D300EADA0D /* BasicTransformViewController.m in Sources */,
 				A613A32620EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.m in Sources */,
 				A668224A20AADE6A00BE07CE /* EarthSphereViewController.m in Sources */,
+				A641E83920F443A600668862 /* UtilityMesh+skinning.m in Sources */,
+				A641E83F20F443CC00668862 /* UtilityArmatureBaseEffect.m in Sources */,
 				A681D90320F33A0800CA40C0 /* UtilityEffect.m in Sources */,
 				A681D8FC20F3397F00CA40C0 /* UtilityMesh+viewAdditions.m in Sources */,
 				A644903720EF5A3300844A72 /* AnimateTextureAtlasViewController.m in Sources */,
 				A681D8E720F337FA00CA40C0 /* LodeModelFromModelPlistViewController.m in Sources */,
+				A617312920F3630700C42C7E /* SkeletalAnimationViewController.m in Sources */,
 				A6B42614208870C500CC0035 /* AEAGLContext.m in Sources */,
 				A6FBE4CE20A52DFD00083C31 /* SimpleLightViewController.m in Sources */,
 				A613A33620EB5982006CCD0C /* SceneRinkModel.m in Sources */,
@@ -777,12 +834,15 @@
 				A6B4260B2088342400CC0035 /* AGLKViewViewController.m in Sources */,
 				A6B42629208DC36B00CC0035 /* MultipleTexturesViewController.m in Sources */,
 				A613A33020EB4BA4006CCD0C /* SceneMesh.m in Sources */,
+				A641E83620F4438400668862 /* UtilityModelManager+skinning.m in Sources */,
+				A641E83320F4436C00668862 /* UtilityModel+skinning.m in Sources */,
 				A6B425CF2085DE1000CC0035 /* AppDelegate.m in Sources */,
 				A6B4261B2088930C00CC0035 /* SimpleTextureViewController.m in Sources */,
 				A681D8F920F3397F00CA40C0 /* UtilityTextureInfo+viewAdditions.m in Sources */,
 				A681D8FB20F3397F00CA40C0 /* UtilityModel+viewAdditions.m in Sources */,
 				A6B426212089CA9D00CC0035 /* AGLKTextureLoader.m in Sources */,
 				A681D8F720F3397F00CA40C0 /* UtilityModelManager.m in Sources */,
+				A641E83C20F443B400668862 /* UtilityJoint.m in Sources */,
 				A613A32D20EB4B93006CCD0C /* SceneModel.m in Sources */,
 				A613A32A20EB4B44006CCD0C /* SceneCar.m in Sources */,
 			);
