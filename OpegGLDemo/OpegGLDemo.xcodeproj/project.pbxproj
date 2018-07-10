@@ -85,6 +85,8 @@
 		A6B42632208F0BA000CC0035 /* CustomTexturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42631208F0BA000CC0035 /* CustomTexturesViewController.m */; };
 		A6B42635208F1D9B00CC0035 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A6B42633208F1D9B00CC0035 /* Shader.fsh */; };
 		A6B42636208F1D9B00CC0035 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = A6B42634208F1D9B00CC0035 /* Shader.vsh */; };
+		A6C6C1F120F45E58001468AB /* SkinModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6C1F020F45E58001468AB /* SkinModelViewController.m */; };
+		A6C6C1F320F462D5001468AB /* armatureSkin.modelplist in Resources */ = {isa = PBXBuildFile; fileRef = A6C6C1F220F462D5001468AB /* armatureSkin.modelplist */; };
 		A6FBE4CE20A52DFD00083C31 /* SimpleLightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FBE4CC20A52DFD00083C31 /* SimpleLightViewController.m */; };
 		A6FBE4CF20A52DFD00083C31 /* SimpleLightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6FBE4CD20A52DFD00083C31 /* SimpleLightViewController.xib */; };
 /* End PBXBuildFile section */
@@ -246,6 +248,9 @@
 		A6B42631208F0BA000CC0035 /* CustomTexturesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTexturesViewController.m; sourceTree = "<group>"; };
 		A6B42633208F1D9B00CC0035 /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
 		A6B42634208F1D9B00CC0035 /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
+		A6C6C1EF20F45E58001468AB /* SkinModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkinModelViewController.h; sourceTree = "<group>"; };
+		A6C6C1F020F45E58001468AB /* SkinModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkinModelViewController.m; sourceTree = "<group>"; };
+		A6C6C1F220F462D5001468AB /* armatureSkin.modelplist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = armatureSkin.modelplist; sourceTree = "<group>"; };
 		A6FBE4CB20A52DFD00083C31 /* SimpleLightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleLightViewController.h; sourceTree = "<group>"; };
 		A6FBE4CC20A52DFD00083C31 /* SimpleLightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleLightViewController.m; sourceTree = "<group>"; };
 		A6FBE4CD20A52DFD00083C31 /* SimpleLightViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleLightViewController.xib; sourceTree = "<group>"; };
@@ -529,6 +534,7 @@
 		A6B425FF208717E100CC0035 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A6C6C1EE20F45E2E001468AB /* SkinModel */,
 				A617312220F3623F00C42C7E /* SkeletalAnimation */,
 				A681D8E820F3396C00CA40C0 /* Utility */,
 				A681D8E420F337F000CA40C0 /* LodeModelFromModelPlist */,
@@ -629,6 +635,16 @@
 				A6B42634208F1D9B00CC0035 /* Shader.vsh */,
 			);
 			path = CustomTextures;
+			sourceTree = "<group>";
+		};
+		A6C6C1EE20F45E2E001468AB /* SkinModel */ = {
+			isa = PBXGroup;
+			children = (
+				A6C6C1F220F462D5001468AB /* armatureSkin.modelplist */,
+				A6C6C1EF20F45E58001468AB /* SkinModelViewController.h */,
+				A6C6C1F020F45E58001468AB /* SkinModelViewController.m */,
+			);
+			path = SkinModel;
 			sourceTree = "<group>";
 		};
 		A6FBE4CA20A52DDE00083C31 /* SimpleLight */ = {
@@ -752,6 +768,7 @@
 				A6B42635208F1D9B00CC0035 /* Shader.fsh in Resources */,
 				A69AB43020EF430900E13F8C /* RadiusSelectionTool.png in Resources */,
 				A605CE6620AEA540001A0DF0 /* AGLKPointParticleShader.fsh in Resources */,
+				A6C6C1F320F462D5001468AB /* armatureSkin.modelplist in Resources */,
 				A613A32720EB461E006CCD0C /* SimpleMotionAnimationGLKViewController.xib in Resources */,
 				A622068320EDB13000201D76 /* AnimatedVertexFlagViewController.xib in Resources */,
 				A605CE6820AEA540001A0DF0 /* AGLKSkyboxShader.fsh in Resources */,
@@ -833,6 +850,7 @@
 				A6B4260E2088343B00CC0035 /* AGLKView.m in Sources */,
 				A6B4260B2088342400CC0035 /* AGLKViewViewController.m in Sources */,
 				A6B42629208DC36B00CC0035 /* MultipleTexturesViewController.m in Sources */,
+				A6C6C1F120F45E58001468AB /* SkinModelViewController.m in Sources */,
 				A613A33020EB4BA4006CCD0C /* SceneMesh.m in Sources */,
 				A641E83620F4438400668862 /* UtilityModelManager+skinning.m in Sources */,
 				A641E83320F4436C00668862 /* UtilityModel+skinning.m in Sources */,

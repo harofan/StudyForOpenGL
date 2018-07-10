@@ -9,8 +9,8 @@
 // Type used to store vertex skinning attributes
 typedef struct
 {   
-   GLKVector4 jointIndices; // encoded float for Shading Language
-   GLKVector4 jointWeights; // weight factor for each joint index
+   GLKVector4 jointIndices; // 索引
+   GLKVector4 jointWeights; // 权重
 } 
 UtilityMeshJointInfluence;
 

@@ -171,33 +171,25 @@
 // by the specified range of the receiver's commands.
 - (void)drawCommandsInRange:(NSRange)aRange;
 {
-   if(0 < aRange.length)
-   {
-      const NSUInteger lastCommandIndex = 
-         (aRange.location + aRange.length) - 1;
-
-      NSParameterAssert(aRange.location < [self.commands count]);
-      NSParameterAssert(lastCommandIndex < [self.commands count]);
-
-      for(NSUInteger i = aRange.location; 
-         i <= lastCommandIndex; i++)
-      {
-         NSDictionary *currentCommand = 
-            [self.commands objectAtIndex:i];
-         const GLsizei  numberOfIndices = (GLsizei)[[currentCommand 
-            objectForKey:@"numberOfIndices"] 
-            unsignedIntegerValue];
-         const GLsizei  firstIndex = (GLsizei)[[currentCommand 
-            objectForKey:@"firstIndex"] unsignedIntegerValue];
-         GLenum mode = (GLenum)[[currentCommand 
-            objectForKey:@"command"] unsignedIntegerValue];
-           
-         glDrawElements(mode,
-            (GLsizei)numberOfIndices,
-            GL_UNSIGNED_SHORT,
-            ((GLushort *)NULL + firstIndex));      
-      }
-   }
+    if(0 < aRange.length)
+    {
+        const NSUInteger lastCommandIndex = (aRange.location + aRange.length) - 1;
+        
+        NSParameterAssert(aRange.location < [self.commands count]);
+        NSParameterAssert(lastCommandIndex < [self.commands count]);
+        
+        for(NSUInteger i = aRange.location; i <= lastCommandIndex; i++){
+            NSDictionary *currentCommand = [self.commands objectAtIndex:i];
+            const GLsizei  numberOfIndices = (GLsizei)[[currentCommand objectForKey:@"numberOfIndices"] unsignedIntegerValue];
+            const GLsizei  firstIndex = (GLsizei)[[currentCommand objectForKey:@"firstIndex"] unsignedIntegerValue];
+            GLenum mode = (GLenum)[[currentCommand objectForKey:@"command"] unsignedIntegerValue];
+            
+            glDrawElements(mode,
+                           (GLsizei)numberOfIndices,
+                           GL_UNSIGNED_SHORT,
+                           ((GLushort *)NULL + firstIndex));
+        }
+    }
 }
 
 
