@@ -187,14 +187,14 @@ static GLfloat UtilityVector3DistanceSquared(
     
     // Collect result;
     GLKVector4 jointIndices = {joint0.jointIndex,
-                               joint1.jointIndex,
-                               joint2.jointIndex,
-                               joint3.jointIndex};
+        joint1.jointIndex,
+        joint2.jointIndex,
+        joint3.jointIndex};
     
     GLKVector4 jointWeights = {joint0.distanceSquared,
-                               joint1.distanceSquared,
-                               joint2.distanceSquared,
-                               joint3.distanceSquared};
+        joint1.distanceSquared,
+        joint2.distanceSquared,
+        joint3.distanceSquared};
     
     // Normalizing scales the weights proportionally
     jointWeights = GLKVector4Normalize(jointWeights);

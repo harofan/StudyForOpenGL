@@ -87,6 +87,10 @@
 		A6B42636208F1D9B00CC0035 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = A6B42634208F1D9B00CC0035 /* Shader.vsh */; };
 		A6C6C1F120F45E58001468AB /* SkinModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C6C1F020F45E58001468AB /* SkinModelViewController.m */; };
 		A6C6C1F320F462D5001468AB /* armatureSkin.modelplist in Resources */ = {isa = PBXBuildFile; fileRef = A6C6C1F220F462D5001468AB /* armatureSkin.modelplist */; };
+		A6E1BEB220F59338003260AC /* SkyBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E1BEB020F59338003260AC /* SkyBoxViewController.m */; };
+		A6E1BEB320F59338003260AC /* SkyBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E1BEB120F59338003260AC /* SkyBoxViewController.xib */; };
+		A6E1BEB520F598DC003260AC /* skybox0.png in Resources */ = {isa = PBXBuildFile; fileRef = A6E1BEB420F598DC003260AC /* skybox0.png */; };
+		A6E1BEB720F598E7003260AC /* boat.modelplist in Resources */ = {isa = PBXBuildFile; fileRef = A6E1BEB620F598E7003260AC /* boat.modelplist */; };
 		A6FBE4CE20A52DFD00083C31 /* SimpleLightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FBE4CC20A52DFD00083C31 /* SimpleLightViewController.m */; };
 		A6FBE4CF20A52DFD00083C31 /* SimpleLightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6FBE4CD20A52DFD00083C31 /* SimpleLightViewController.xib */; };
 /* End PBXBuildFile section */
@@ -251,6 +255,11 @@
 		A6C6C1EF20F45E58001468AB /* SkinModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkinModelViewController.h; sourceTree = "<group>"; };
 		A6C6C1F020F45E58001468AB /* SkinModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkinModelViewController.m; sourceTree = "<group>"; };
 		A6C6C1F220F462D5001468AB /* armatureSkin.modelplist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = armatureSkin.modelplist; sourceTree = "<group>"; };
+		A6E1BEAF20F59338003260AC /* SkyBoxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkyBoxViewController.h; sourceTree = "<group>"; };
+		A6E1BEB020F59338003260AC /* SkyBoxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkyBoxViewController.m; sourceTree = "<group>"; };
+		A6E1BEB120F59338003260AC /* SkyBoxViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkyBoxViewController.xib; sourceTree = "<group>"; };
+		A6E1BEB420F598DC003260AC /* skybox0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skybox0.png; sourceTree = "<group>"; };
+		A6E1BEB620F598E7003260AC /* boat.modelplist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = boat.modelplist; sourceTree = "<group>"; };
 		A6FBE4CB20A52DFD00083C31 /* SimpleLightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleLightViewController.h; sourceTree = "<group>"; };
 		A6FBE4CC20A52DFD00083C31 /* SimpleLightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleLightViewController.m; sourceTree = "<group>"; };
 		A6FBE4CD20A52DFD00083C31 /* SimpleLightViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleLightViewController.xib; sourceTree = "<group>"; };
@@ -534,6 +543,7 @@
 		A6B425FF208717E100CC0035 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A6E1BEAE20F59324003260AC /* SkyBox */,
 				A6C6C1EE20F45E2E001468AB /* SkinModel */,
 				A617312220F3623F00C42C7E /* SkeletalAnimation */,
 				A681D8E820F3396C00CA40C0 /* Utility */,
@@ -645,6 +655,18 @@
 				A6C6C1F020F45E58001468AB /* SkinModelViewController.m */,
 			);
 			path = SkinModel;
+			sourceTree = "<group>";
+		};
+		A6E1BEAE20F59324003260AC /* SkyBox */ = {
+			isa = PBXGroup;
+			children = (
+				A6E1BEB620F598E7003260AC /* boat.modelplist */,
+				A6E1BEB420F598DC003260AC /* skybox0.png */,
+				A6E1BEAF20F59338003260AC /* SkyBoxViewController.h */,
+				A6E1BEB020F59338003260AC /* SkyBoxViewController.m */,
+				A6E1BEB120F59338003260AC /* SkyBoxViewController.xib */,
+			);
+			path = SkyBox;
 			sourceTree = "<group>";
 		};
 		A6FBE4CA20A52DDE00083C31 /* SimpleLight */ = {
@@ -777,12 +799,15 @@
 				A6FBE4CF20A52DFD00083C31 /* SimpleLightViewController.xib in Resources */,
 				A644903920EF688700844A72 /* RabbitTextureAtlas.png in Resources */,
 				A6B425DA2085DE1100CC0035 /* LaunchScreen.storyboard in Resources */,
+				A6E1BEB320F59338003260AC /* SkyBoxViewController.xib in Resources */,
 				A641E84320F447BF00668862 /* UtilityArmaturePointLightShader.vsh in Resources */,
 				A641E84120F446FC00668862 /* armature.modelplist in Resources */,
 				A605CE6B20AEA540001A0DF0 /* AGLKSkyboxShader.vsh in Resources */,
 				A681D90A20F34F2B00CA40C0 /* bumper.modelplist in Resources */,
+				A6E1BEB720F598E7003260AC /* boat.modelplist in Resources */,
 				A641E84520F4483200668862 /* UtilityArmaturePointLightShader.fsh in Resources */,
 				A6B425D72085DE1100CC0035 /* Assets.xcassets in Resources */,
+				A6E1BEB520F598DC003260AC /* skybox0.png in Resources */,
 				A605CE6920AEA540001A0DF0 /* AGLKPointParticleShader.vsh in Resources */,
 				A605CE6A20AEA540001A0DF0 /* AGLKTextureMatrix2PointLightShader.fsh in Resources */,
 				A6B425D52085DE1000CC0035 /* Main.storyboard in Resources */,
@@ -828,6 +853,7 @@
 				A668224A20AADE6A00BE07CE /* EarthSphereViewController.m in Sources */,
 				A641E83920F443A600668862 /* UtilityMesh+skinning.m in Sources */,
 				A641E83F20F443CC00668862 /* UtilityArmatureBaseEffect.m in Sources */,
+				A6E1BEB220F59338003260AC /* SkyBoxViewController.m in Sources */,
 				A681D90320F33A0800CA40C0 /* UtilityEffect.m in Sources */,
 				A681D8FC20F3397F00CA40C0 /* UtilityMesh+viewAdditions.m in Sources */,
 				A644903720EF5A3300844A72 /* AnimateTextureAtlasViewController.m in Sources */,
